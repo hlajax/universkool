@@ -1,0 +1,68 @@
+<%= form_with(model: etablissement, local: true) do |form| %>
+  <% if etablissement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(etablissement.errors.count, "error") %> prohibited this etablissement from being saved:</h2>
+
+      <ul>
+        <% etablissement.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nom %>
+    <%= form.text_field :nom %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :profil %>
+    <%= form.file_field :profil %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cover %>
+    <%= form.file_field :cover %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telephone %>
+    <%= form.text_field :telephone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :site %>
+    <%= form.text_field :site %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adresse %>
+    <%= form.text_field :adresse %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :country_id %>
+    <%= form.collection_select :country_id, Country.all, :id, :nom, {prompt:"Sélectionnez une catégorie"} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_id %>
+    <%= form.collection_select :category_id, Category.all, :id, :titre, {prompt:"Sélectionnez une catégorie"} %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

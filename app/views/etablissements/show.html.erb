@@ -1,0 +1,32 @@
+<div class="container-fluid" style="background:url('<%= @etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center;height:300px;">
+	<div class="row">
+		<div class="col-lg-2 m-top-big">
+			<%=image_tag @etablissement.profil.url, class:"img-fluid logo"%>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6  m-top bg-white ze-pad">
+			<h4 class="text-maj text-bold"><%= @etablissement.nom %></h4>
+			<a href="tel: <%= @etablissement.telephone %>" class="btn btn-primary"><i class="fas fa-phone-square-alt"></i> Appeler</a>
+			<a href="mailto: <%= @etablissement.email %>" class="btn btn-primary"><i class="fas fa-envelope"></i> Envoyez un email</a>
+			<a href="<%= @etablissement.site %>" class="btn btn-primary"><i class="fas fa-globe-africa"></i> Visiter le site web</a>
+			<h4 class="text-maj text-bold m-top">description</h4>
+			<hr>
+			<p><%= @etablissement.description %></p>
+		</div>
+		<div class="col-lg-5 offset-lg-1 m-top bg-white ze-pad">
+			<h4 class="text-maj text-bold">informations</h4>
+			<hr>
+			<p><i class="fas fa-phone-square-alt"></i> <%= @etablissement.telephone %></p>
+			<p><i class="fas fa-envelope"></i> <%= @etablissement.email %></p>
+			<p><i class="fas fa-globe-africa"></i> <%= @etablissement.site %></p>
+			<p><i class="fas fa-map-marker-alt"></i> <%= @etablissement.adresse %></p>
+			<p><i class="fas fa-flag"></i> <%= @etablissement.country.nom %></p>
+			<p><i class="fas fa-archive"></i> <%= @etablissement.category.titre %></p>
+		</div>
+	</div>
+</div>
+<%= link_to 'Edit', edit_etablissement_path(@etablissement) %> |
+<%= link_to 'Back', etablissements_path %>

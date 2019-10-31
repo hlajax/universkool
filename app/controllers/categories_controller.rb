@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_administrateur!
   # GET /categories
   # GET /categories.json
   def index
@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/new
   def new
-    @category = Category.new
+    @category = current_administrateur.categories.build
   end
 
   # GET /categories/1/edit
@@ -24,7 +24,7 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.json
   def create
-    @category = Category.new(category_params)
+    @category = current_administrateur.categories.build(category_params)
 
     respond_to do |format|
       if @category.save
@@ -69,6 +69,6 @@ class CategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def category_params
-      params.require(:category).permit(:titre, :description)
+      params.require(:category).permit(:titre, :description, :administrateur_id)
     end
 end

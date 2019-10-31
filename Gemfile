@@ -21,6 +21,7 @@ gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 gem 'cloudinary'
 gem 'friendly_id', '~> 5.3'
 gem 'ransack', '~> 2.3'
+gem 'devise', '~> 4.7', '>= 4.7.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

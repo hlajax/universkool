@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :articles
+  devise_for :administrateurs
   resources :etablissements
   resources :countries
   resources :accueil

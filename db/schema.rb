@@ -10,10 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_26_122005) do
+ActiveRecord::Schema.define(version: 2019_10_31_163922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "administrateurs", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_administrateurs_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_administrateurs_on_reset_password_token", unique: true
+  end
+
+  create_table "articles", force: :cascade do |t|
+    t.string "titre"
+    t.text "contenu"
+    t.string "photo"
+    t.string "slug"
+    t.bigint "administrateur_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["administrateur_id"], name: "index_articles_on_administrateur_id"
+    t.index ["slug"], name: "index_articles_on_slug", unique: true
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "titre"
@@ -21,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_10_26_122005) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "slug"
+    t.integer "administrateur_id"
     t.index ["slug"], name: "index_categories_on_slug", unique: true
   end
 
@@ -30,6 +55,7 @@ ActiveRecord::Schema.define(version: 2019_10_26_122005) do
     t.string "slug"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "administrateur_id"
     t.index ["slug"], name: "index_countries_on_slug", unique: true
   end
 
@@ -47,6 +73,7 @@ ActiveRecord::Schema.define(version: 2019_10_26_122005) do
     t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "administrateur_id"
     t.index ["category_id"], name: "index_etablissements_on_category_id"
     t.index ["country_id"], name: "index_etablissements_on_country_id"
     t.index ["slug"], name: "index_etablissements_on_slug", unique: true
@@ -63,6 +90,7 @@ ActiveRecord::Schema.define(version: 2019_10_26_122005) do
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
+  add_foreign_key "articles", "administrateurs"
   add_foreign_key "etablissements", "categories"
   add_foreign_key "etablissements", "countries"
 end

@@ -1,6 +1,6 @@
 class EtablissementsController < ApplicationController
   before_action :set_etablissement, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_administrateur!, ecxept:[:index, :show]
   # GET /etablissements
   # GET /etablissements.json
   def index
@@ -14,7 +14,7 @@ class EtablissementsController < ApplicationController
 
   # GET /etablissements/new
   def new
-    @etablissement = Etablissement.new
+    @etablissement = current_administrateur.etablissements.build
   end
 
   # GET /etablissements/1/edit
@@ -24,7 +24,7 @@ class EtablissementsController < ApplicationController
   # POST /etablissements
   # POST /etablissements.json
   def create
-    @etablissement = Etablissement.new(etablissement_params)
+    @etablissement = current_administrateur.etablissements.build(etablissement_params)
 
     respond_to do |format|
       if @etablissement.save
@@ -69,6 +69,6 @@ class EtablissementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def etablissement_params
-      params.require(:etablissement).permit(:nom, :description, :profil, :cover, :telephone, :email, :site, :adresse,  :country_id, :category_id)
+      params.require(:etablissement).permit(:nom, :description, :profil, :cover, :telephone, :email, :site, :adresse,  :country_id, :category_id, :administrateur_id)
     end
 end

@@ -1,6 +1,6 @@
 class CountriesController < ApplicationController
   before_action :set_country, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_administrateur!
   # GET /countries
   # GET /countries.json
   def index
@@ -14,7 +14,7 @@ class CountriesController < ApplicationController
 
   # GET /countries/new
   def new
-    @country = Country.new
+    @country = current_administrateur.countries.build
   end
 
   # GET /countries/1/edit
@@ -24,7 +24,7 @@ class CountriesController < ApplicationController
   # POST /countries
   # POST /countries.json
   def create
-    @country = Country.new(country_params)
+    @country = current_administrateur.countries.build(country_params)
 
     respond_to do |format|
       if @country.save
@@ -69,6 +69,6 @@ class CountriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def country_params
-      params.require(:country).permit(:nom, :description)
+      params.require(:country).permit(:nom, :description, :administrateur_id)
     end
 end

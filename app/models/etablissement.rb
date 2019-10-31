@@ -5,4 +5,5 @@ class Etablissement < ApplicationRecord
   friendly_id :nom, use: :slugged
   belongs_to :country
   belongs_to :category
+   belongs_to :administrateur
 end

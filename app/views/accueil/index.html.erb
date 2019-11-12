@@ -1,23 +1,5 @@
-<div class="container-fluid p-3" style="background-color:orangered;">
-	<div class="row">
-			<div class="col-lg-6 col-12">
-				<h3 class="text-bold text-white">UniverSkool</h3>
-			</div>
-			<div class="col-lg-6 col-12">
-				<%= search_form_for @q do |f|%>
-  					<div class="row">
-  						<div class="form-group col-lg-9 col-12">
-  					<%= f.search_field :nom_cont , class:"form-control" %>
-  					</div>
-  					<div class="form-group col-lg-3 col-12">
-  						<%= f.submit "Chercher" , class:"btn btn-success"%>
-					</div>
-  					</div>
-				<% end %>
-			</div>
-	</div>
-</div>
-<header>
+<%=render 'menus/main'%>
+ <header>
   <div class="overlay"></div>
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
     <source src="https://res.cloudinary.com/aseed/video/upload/v1571231028/Homework_-_1028_kuyehg.mp4" type="video/mp4">
@@ -61,16 +43,10 @@ Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie
 			    </div>
 		</div>
 		<div class="col-lg-12 col-12 text-center m-top-mini m-bottom-mini">
-			<%=link_to "voir tous les établissements",root_path ,class:"btn btn-primary btn-lg text-maj text-bold" %>
+			<%=link_to "voir tous les établissements",root_path ,class:"btn btn-appel btn-lg text-maj text-bold" %>
 		</div>
 	</div>
 </div>
-<div class="container-fluid p-3" style="background-color:orangered;">
-	<div class="row">
-			<div class="col-lg-6 col-12">
-				<h3 class="text-bold text-white">UniverSkool</h3>
-			</div>
-			<div class="col-lg-6 col-12">
-			</div>
-	</div>
-</div>
+
+
+<%=render 'footers/main-footer'%>

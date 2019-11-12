@@ -15,9 +15,55 @@
  */
 body{
 	background-color: #f2f2f2;
+	font-family: 'Open Sans', sans-serif;
+}
+.bg-head{
+	background-color:#0878a4;
+}
+.nav-link{
+	color:white;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: all .5s ease;
+}
+.nav-link:hover{
+	background-color:white;
+	color: #0584f2;
 }
 .bg-white{
 	background-color: white;
+}
+.btn-appel{
+	border-radius: 0px;
+	color:white;
+	background-color: #f22f08;
+}
+.btn-appel:hover{
+	border-radius: 0px;
+	background-color:white;
+	color: #f22f08;
+	border: 1px solid #f22f08;
+}
+.btn-mail{
+	border-radius: 0px;
+	color:white;
+	background-color: #d72f01;
+}
+.btn-mail:hover{
+	background-color:white;
+	color: #d72f01;
+	border: 1px solid #d72f01;
+}
+.btn-site{
+	border-radius: 0px;
+	color:white;
+	background-color: #d53c3c;
+}
+.btn-site:hover{
+	background-color:white;
+	color: #d53c3c;
+	border: 1px solid #d53c3c;
 }
 .m-top-big{
 	margin-top: 15%;
@@ -43,6 +89,9 @@ body{
 .ze-pad{
 	padding: 3%;
 }
+.ze-pad-mini{
+	padding: 1.5%;
+}
 .text-bold{
 	font-weight: 800;
 }
@@ -57,7 +106,9 @@ body{
   z-index: 1;
   max-width: 150px;
   opacity: 1;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border: 10px solid #f22f08;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  background-color: white;
 }
 header {
   position: relative;
@@ -111,7 +162,7 @@ header .overlay {
   text-align: left;
   line-height: 1.4em;
   background-color: white;
-  height: 350px;
+  height: 300px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 .cover{
@@ -168,8 +219,8 @@ header .overlay {
   opacity: 1;
 }
 .snip1336 .profile {
-  border-radius: 0%;
-  border: 5px solid orangered;
+  border-radius: 50%;
+  border: 5px solid #f22f08;
   background-color: white;
   position: absolute;
   bottom: 100%;
@@ -181,8 +232,8 @@ header .overlay {
 }
 .snip1336 .follow {
   margin-right: 4%;
-  border-color: #2980b9;
-  color: #2980b9;
+  border-color: #f22f08;
+  color: #f22f08;
 }
 
 .snip1336 h2 {
@@ -195,11 +246,15 @@ header .overlay {
 .snip1336 h2 span {
   display: block;
   font-size: 0.5em;
-  color: #2980b9;
+  color: #f22f08;
 }
 .snip1336 p {
   margin: 0 0 10px;
   font-size: 0.8em;
   letter-spacing: 1px;
   opacity: 0.8;
+}
+#sticky-footer {
+  flex-shrink: none;
+  background-color:#0878a4;
 }

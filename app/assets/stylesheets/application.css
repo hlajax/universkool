@@ -111,6 +111,11 @@ header .overlay {
   text-align: left;
   line-height: 1.4em;
   background-color: white;
+  height: 350px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.cover{
+	height: 150px;
 }
 .card{
 	background-color: transparent;
@@ -126,7 +131,6 @@ header .overlay {
   max-width: 100%;
   vertical-align: top;
   opacity: 0.85;
-	height: 150px;
 }
 .snip1336 figcaption {
   width: 100%;
@@ -165,7 +169,8 @@ header .overlay {
 }
 .snip1336 .profile {
   border-radius: 0%;
-  border: 1px solid orangered;
+  border: 5px solid orangered;
+  background-color: white;
   position: absolute;
   bottom: 100%;
   left: 25px;

@@ -1,5 +1,6 @@
 <%=render 'menus/main'%>
-<div class="container-fluid" style="background:url('<%= @etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center;height:300px;">
+<div class="container-fluid" style="background:url('<%= @etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center;height:300px;  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+">
 	<div class="row">
 		<div class="col-lg-2 m-top-big">
 			<%=image_tag @etablissement.profil.url, class:"img-fluid logo"%>

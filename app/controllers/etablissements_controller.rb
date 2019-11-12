@@ -1,6 +1,6 @@
 class EtablissementsController < ApplicationController
   before_action :set_etablissement, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_administrateur!, ecxept:[:index, :show]
+  before_action :authenticate_administrateur!, except:[:index, :show]
   # GET /etablissements
   # GET /etablissements.json
   def index

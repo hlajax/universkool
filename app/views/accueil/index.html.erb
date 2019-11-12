@@ -37,9 +37,12 @@ Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie
 		<div class="col-lg-12 col-12 text-center m-top-mini">
 			<h1 class="text-bold text-maj">les écoles à la une</h1>
 		</div>
-		<div class="card-deck">
-			    		<%@etablissement.each do |etablissement|%>
-		<div class="card col-lg-12 col-12">
+		<div class="col-lg-12 col-12 text-center m-top-mini">
+			    <div class="row">
+			    	   <div class="card-deck">
+			    	   	      <div class="card">
+			    	   	      	      		<%@etablissement.each do |etablissement|%>
+		<div class="col-lg-4 col-12">
 				<figure class="snip1336">
   						<%=image_tag etablissement.cover.url%>
   						<figcaption>
@@ -51,6 +54,9 @@ Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie
 					</figure>
 		</div>
 <%end%>
+			    	   	      </div>
+			    	   </div>
+			    </div>
 		</div>
 		<div class="col-lg-12 col-12 text-center m-top-mini m-bottom-mini">
 			<%=link_to "voir tous les établissements",root_path ,class:"btn btn-primary btn-lg text-maj text-bold" %>

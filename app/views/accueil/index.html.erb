@@ -40,9 +40,10 @@ Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie
 		<div class="col-lg-12 col-12 text-center m-top-mini">
 			    <div class="row">
 			    	   <div class="card-deck">
-			    	   	      <div class="card">
+			    	   	      
 			    	   	      	      		<%@etablissement.each do |etablissement|%>
-		<div class="col-lg-4 col-12">
+			    	   	      	      		<div class="col-lg-4  col-12">
+		<div class="card ">
 				<figure class="snip1336">
   						<%=image_tag etablissement.cover.url%>
   						<figcaption>
@@ -53,8 +54,9 @@ Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie
   						</figcaption>
 					</figure>
 		</div>
+		</div>
 <%end%>
-			    	   	      </div>
+			    	   	      
 			    	   </div>
 			    </div>
 		</div>

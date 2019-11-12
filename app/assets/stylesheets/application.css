@@ -112,6 +112,10 @@ header .overlay {
   line-height: 1.4em;
   background-color: white;
 }
+.card{
+	background-color: transparent;
+	border: none;
+}
 .snip1336 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

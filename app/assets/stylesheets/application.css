@@ -126,6 +126,7 @@ header .overlay {
   max-width: 100%;
   vertical-align: top;
   opacity: 0.85;
+	height: 150px;
 }
 .snip1336 figcaption {
   width: 100%;
@@ -164,6 +165,7 @@ header .overlay {
 }
 .snip1336 .profile {
   border-radius: 0%;
+  border: 1px solid orangered;
   position: absolute;
   bottom: 100%;
   left: 25px;

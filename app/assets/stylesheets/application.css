@@ -20,16 +20,22 @@ body{
 .bg-head{
 	background-color:#0878a4;
 }
+.text-logo{
+	color:#0878a4;
+	font-size: 28px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
 .nav-link{
-	color:white;
+	color:#0878a4;
 	font-size: 16px;
 	font-weight: bold;
 	text-transform: uppercase;
 	transition: all .5s ease;
 }
 .nav-link:hover{
-	background-color:white;
-	color: #0584f2;
+	background-color:#0878a4;
+	color: white;
 }
 .bg-white{
 	background-color: white;
@@ -90,6 +96,9 @@ body{
 }
 .ze-pad{
 	padding: 3%;
+}
+.ze-pad-big{
+	padding: 8%;
 }
 .ze-pad-mini{
 	padding: 1.5%;

@@ -36,4 +36,8 @@
 		</div>
 	</div>
 </div>
+<%if administrateur_signed_in?%>
 <%= link_to 'New Etablissement', new_etablissement_path %>
+<%else%>
+<% end %>
+<%=render 'footers/main-footer'%>

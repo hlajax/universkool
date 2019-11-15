@@ -1,0 +1,74 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-7 col-12"></div>
+		<div class="col-lg-4 col-12 m-top-mini">
+	            <h4 class="text-cap text-bold">Inscrivez-vous</h4>
+	            <h6>C'est simple et rapide</h6>
+		   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+			<div class="row m-top-xs">
+				        <div class="form-group col-lg-12 col-12">
+    <%= f.text_field :nom, autofocus: true, placeholder: "votre nom complet",class:"form-control" %>
+  </div>
+   
+   <div class="form-group col-lg-12 col-12">
+    <%= f.email_field :email, autocomplete: "votre adresse email",placeholder:"votre adresse email", class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-6 col-12">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder:"nouveau mot de passe (au moins 6 caractères)", class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-6 col-12">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"confirmer mot de passe",class:"form-control" %>
+  </div>
+   <div class="form-group col-lg-6 col-12">
+    <%= f.collection_select :country_id, Country.all, :id, :nom, {prompt:"Sélectionnez un pays"},class:"form-control",class:"form-control" %>
+</div>
+  
+ <div class="form-group col-lg-6 col-12">
+    <%= f.text_field :ville, placeholder: "ville de résidence",class:"form-control" %>
+  </div>
+  
+  <div class="form-group col-lg-12 col-12">
+    <%= f.text_field :formation, placeholder: "formation que vous souhaitez suivre",class:"form-control" %>
+  </div>
+  
+  <div class="form-group col-lg-6 col-12">
+    <%= f.text_field :pere, placeholder: "profession de votre père",class:"form-control" %>
+  </div>
+  
+  <div class="form-group col-lg-6 col-12">
+    <%= f.text_field :mere, placeholder: "profession de votre mère",class:"form-control" %>
+  </div>
+  
+  <div class="form-group col-lg-12 col-12">
+   <%= f.label :bulletin %>
+    <%= f.file_field :bulletin%>
+  </div>
+  
+  <div class="form-group col-lg-12 col-12">
+   <%= f.label :certificat %>
+    <%= f.file_field :certificat%>
+  </div>
+  
+  <div class="form-group col-lg-12 col-12">
+   <%= f.label :carte_d_identité %>
+    <%= f.file_field :carte%>
+  </div>
+  
+   <div class="form-group col-lg-6 col-12">
+    <%= f.submit "inscription", class:"btn btn-appel text-maj text-bold" %>
+  </div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<%= render "utilisateurs/shared/links" %>

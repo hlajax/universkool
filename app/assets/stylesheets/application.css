@@ -52,8 +52,20 @@ body{
 }
 .bg-white{
 	background-color: white;
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0);
 
+}
+.btn-white{
+	border-radius: 0px;
+	color:#0878a4;
+	background-color: white;
+	transition: all .3s ease;
+}
+.btn-white:hover{
+	border-radius: 0px;
+	color: white;
+	background-color: #0878a4;
+	border: 1px solid white;
 }
 .btn-appel{
 	border-radius: 0px;
@@ -242,8 +254,8 @@ header .overlay {
   opacity: 1;
 }
 .snip1336 .profile {
-  border-radius: 50%;
-  border: 5px solid #f22f08;
+  border-radius: 0%;
+  /*border: 5px solid #f22f08;*/
   background-color: white;
   position: absolute;
   bottom: 100%;

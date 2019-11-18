@@ -14,14 +14,28 @@ Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie
     </div>
   </div>
 </header>
-<div class="container-fluid" style="background:url('https://res.cloudinary.com/aseed/image/upload/v1573639394/n-visuel_eid8x4.jpg')no-repeat; background-size:cover;background-position:center left;height:500px;">
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-lg-12 col-12">
+		<div class="col-lg-6 col-12" style="background:url('https://images.pexels.com/photos/1181327/pexels-photo-1181327.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')no-repeat; background-size:cover;background-position:center ;height:500px;">
 			
 		</div>
+		
+		<div class="col-lg-6 col-12 bg-head text-white text-center">
+		        <h5 class="text-bold m-top-big">Vous cherchez un établissement?</h5>
+
+<h4 class="m-top-mini">
+Notre mission ? Vous aider à en prendre conscience.
+Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie et à vous y épanouir.
+</h4>
+
+<h1 class="text-bold text-maj m-top-mini">#WEVEGOTYOURBACK</h1>
+	
+	<%=link_to "voir tous les établissements", etablissements_path ,class:"btn btn-white btn-lg text-maj text-bold m-top" %>
+		</div>
+		
 	</div>
 </div>
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-lg-12 col-12 text-center m-top-mini">
 			<h2 class="text-bold text-maj">les écoles à la une</h2>
@@ -31,7 +45,7 @@ Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie
 			    	   	      
 			    	   	      	      		<%@etablissements.each do |etablissement|%>
 			    	   	      	      		
-		<div class=" col-lg-4 col-12">
+		<div class=" col-lg-3 col-12">
 				<figure class="snip1336">
  						<div class="cover" style="background: url('<%=etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center;">
  							
@@ -59,7 +73,7 @@ Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-lg-12 col-12 m-top-mini">
-	          <h2 class="text-maj text-bold text-center">Articles publiés récemment</h2>
+	          <h2 class="text-maj text-bold text-center">Articles de notre blog</h2>
 		       <div class="row m-top">
 			<%@articles.each do |article| %>
 			      <div class="col-lg-4 col-12">

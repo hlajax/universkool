@@ -1,6 +1,7 @@
 class Etablissement < ApplicationRecord
   mount_uploader :cover, CoverUploader
   mount_uploader :profil, LogoUploader
+  mount_uploader :photos, PhotoUploader
     extend FriendlyId
   friendly_id :nom, use: :slugged
   belongs_to :country

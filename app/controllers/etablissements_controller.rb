@@ -10,6 +10,7 @@ class EtablissementsController < ApplicationController
   # GET /etablissements/1
   # GET /etablissements/1.json
   def show
+	  @etablissements_similaires = Etablissement.where(category_id: @etablissement.category_id).limit(6).order("created_at DESC")
   end
 
   # GET /etablissements/new
@@ -69,6 +70,6 @@ class EtablissementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def etablissement_params
-      params.require(:etablissement).permit(:nom, :description, :profil, :cover, :telephone, :email, :site, :adresse,  :country_id, :category_id, :administrateur_id)
+      params.require(:etablissement).permit(:nom, :description, :profil, :cover, :telephone, :email, :site, :adresse,  :country_id, :category_id, :administrateur_id, {photos: []})
     end
 end

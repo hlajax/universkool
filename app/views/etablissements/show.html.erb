@@ -44,6 +44,27 @@
 			<p><%= @etablissement.description %></p>
 		</div>
 	</div>
+	<div class="row">
+			    	   	      
+			    	   	      	      		<%@etablissements_similaires.each do |etablissement|%>
+			    	   	      	      		
+		<div class=" col-lg-4 col-12">
+				<figure class="snip1336">
+ 						<div class="cover" style="background: url('<%=etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center;">
+ 							
+ 						</div>
+  						
+  						<figcaption>
+      							<%=image_tag etablissement.profil.url,class:"profile"%>
+    							<h2><%=etablissement.nom%><span><%=etablissement.country.nom%></span></h2>
+    							<a href="<%=etablissement.site%>" class="follow" target="_blank">Site Web</a>
+    							<%=link_to "Informations", etablissement, class:"info"%>
+  						</figcaption>
+					</figure>
+		</div>
+<%end%>
+			    	   	      
+			    </div>
 </div>
 <%if administrateur_signed_in?%>
 <%= link_to 'Edit', edit_etablissement_path(@etablissement) %> |

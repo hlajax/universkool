@@ -1,7 +1,6 @@
 class AccueilController < ApplicationController
   def index
-	  @q = Etablissement.ransack(params[:q])
-  	  @etablissement = @q.result(distinct: true)
+	  @etablissements = Etablissement.all.limit(8).order("created_at desc")
 	  @articles = Article.all.limit(6).order("created_at desc")
   end
 end

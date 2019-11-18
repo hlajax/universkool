@@ -12,6 +12,7 @@
 		    <div class="col-lg-12 col-12 bg-white m-top ze-pad">
 		    	   <h2 class="text-maj text-bold"><%= @etablissement.nom %></h2>
 			       <h5 class="text-maj text-bold m-top">informations</h5>
+		       			<hr>
 			       			<div class="row">
 				<div class="col-lg-4 col-12">
 				      <h5><i class="fas fa-phone-square-alt"></i> <%= @etablissement.telephone %></h5>
@@ -35,8 +36,8 @@
 			<hr>
 			<a href="tel: <%= @etablissement.telephone %>" class="btn btn-appel btn-lg text-maj text-bold"><i class="fas fa-phone-square-alt"></i> Appeler</a>
 			<a href="mailto: <%= @etablissement.email %>" class="btn btn-mail btn-lg text-maj text-bold"><i class="fas fa-envelope"></i> Envoyer un email</a>
-			<a href="<%= @etablissement.site %>" class="btn btn-site btn-lg text-maj text-bold"><i class="fas fa-globe-africa"></i> Visiter le site web</a>
-			<hr>
+			<a href="<%= @etablissement.site %>" class="btn btn-site btn-lg text-maj text-bold d-none"><i class="fas fa-globe-africa"></i> Visiter le site web</a>
+			
 		    </div>
 		    <div class="col-lg-7 col-12 bg-white m-top ze-pad">
 		    	   	<h4 class="text-maj text-bold m-top">description</h4>
@@ -45,7 +46,7 @@
 		    </div>
 		    <div class="col-lg-4 offset-lg-1 col-12 bg-white m-top ze-pad">
 		    	    					<div class="row">
-					<div class="col-lg-6 offset-lg-3 m-top-big">
+					<div class="col-lg-6 offset-lg-3 m-top-mini">
 			<%=image_tag @etablissement.profil.url, class:"img-fluid"%>
 		</div>
 						<div class="col-lg-12 col-12 m-top-mini">
@@ -54,7 +55,7 @@
 			<div class="col-lg-12 col-12">
 			       <h5><i class="fas fa-envelope"></i> <%= @etablissement.email %></h5>
 			</div>
-			<div class="col-lg-12 col-12">
+			<div class="col-lg-12 col-12 d-none">
 			        <h5><i class="fas fa-globe-africa"></i> <%= @etablissement.site %></h5>
 			</div>
 			<div class="col-lg-12 col-12 m-top-mini">
@@ -83,7 +84,7 @@
   						<figcaption>
       							<%=image_tag etablissement.profil.url,class:"profile"%>
     							<h2><%=etablissement.nom%><span><%=etablissement.country.nom%></span></h2>
-    							<a href="<%=etablissement.site%>" class="follow" target="_blank">Site Web</a>
+    							<a href="<%=etablissement.site%>" class="follow d-none" target="_blank">Site Web</a>
     							<%=link_to "Informations", etablissement, class:"info"%>
   						</figcaption>
 					</figure>
@@ -98,3 +99,4 @@
 <%= link_to 'Back', etablissements_path %>
 <%else%>
 <%end%>
+<%=render 'footers/main-footer'%>

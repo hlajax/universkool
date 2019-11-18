@@ -255,7 +255,7 @@ header .overlay {
 }
 .snip1336 .profile {
   border-radius: 0%;
-  /*border: 5px solid #f22f08;*/
+  border: 5px solid #f22f08;
   background-color: white;
   position: absolute;
   bottom: 100%;

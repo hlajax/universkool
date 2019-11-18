@@ -5,12 +5,14 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
+	@etablissements = Etablissement.all.limit(8)
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
 	  @etablissements = Etablissement.all.limit(8)
+	  @articles = Article.all.limit(4)
   end
 
   # GET /articles/new

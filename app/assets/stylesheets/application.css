@@ -27,8 +27,8 @@ body{
 	text-transform: uppercase;
 }
 .nav-link{
-	color:#0878a4;
-	font-size: 16px;
+	color: black;
+	font-size: 14px;
 	font-weight: bold;
 	text-transform: uppercase;
 	transition: all .5s ease;
@@ -205,7 +205,8 @@ header .overlay {
 }
 .card{
 	background-color: transparent;
-	border: none;
+	border: 1px solid #ccc;
+	padding: 3%;
 }
 .snip1336 * {
   -webkit-box-sizing: border-box;
@@ -312,14 +313,16 @@ figure.snip1312 img {
   vertical-align: top;
   position: relative;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  height: 300px;
 }
 figure.snip1312 figcaption {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   padding: 15px 15px 30px;
   background-color: #ffffff;
+  margin-top: 5%;
 }
 figure.snip1312 .date {
   background-color: #7f8c8d;
@@ -352,9 +355,10 @@ figure.snip1312 h3 {
   margin-bottom: 10px;
   margin-left: 0px;
   display: inline-block;
-  font-weight: 800;
+  font-weight: bold;
   text-transform: uppercase;
 	color: #f22f08;
+	font-size: 18px;
 }
 figure.snip1312 p {
   font-size: 0.8em;
@@ -424,8 +428,11 @@ figure.snip1312.hover img {
 	font-size: 20px;
 	text-align: center;
 }
+.article-card h3 a{
+	color: black;
+}
 .card-title{
-	font-size: 14px;
+	font-size: 12px;
 }
 .card-title a{
 	color: black;

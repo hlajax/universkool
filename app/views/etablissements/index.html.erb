@@ -2,7 +2,7 @@
 <div class="container-fluid bg-head">
 	<div class="row">
 	      <div class="col-lg-8 offset-lg-2 col-12 text-center ze-pad-big">
-	      	      <h1 class="text-bold text-maj text-white">les établissements</h1>
+	      	      <h1 class="text-bold text-maj text-white entete">les établissements</h1>
 	      </div>
 	</div>
 </div>
@@ -13,7 +13,7 @@
 			    	   	      
 			    	   	      	      		<%@etablissements.each do |etablissement|%>
 			    	   	      	      		
-		<div class=" col-lg-4 col-12">
+		<div class=" col-lg-4 col-6">
 				<figure class="snip1336">
  						<div class="cover" style="background: url('<%=etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center;">
  							
@@ -23,7 +23,7 @@
       							<%=image_tag etablissement.profil.url,class:"profile"%>
     							<h2><%=etablissement.nom%><span><%=etablissement.country.nom%></span></h2>
     							<a href="<%=etablissement.site%>" class="follow d-none" target="_blank">Site Web</a>
-    							<%=link_to "Informations", etablissement, class:"info"%>
+    							<%=link_to "Informations", etablissement, class:"follow"%>
   						</figcaption>
 					</figure>
 		</div>
@@ -31,9 +31,7 @@
 			    	   	      
 			    </div>
 		</div>
-		<div class="col-lg-12 col-12 text-center m-top-mini m-bottom-mini">
-			<%=link_to "voir tous les établissements",etablissements_path ,class:"btn btn-appel btn-lg text-maj text-bold" %>
-		</div>
+
 	</div>
 </div>
 <%if administrateur_signed_in?%>

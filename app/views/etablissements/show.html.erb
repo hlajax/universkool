@@ -1,8 +1,8 @@
 <%=render 'menus/main'%>
-<div class="container-fluid" style="background:url('<%= @etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center;height:300px;  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+<div class="container-fluid e-cover" style="background:url('<%= @etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center; box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 ">
 	<div class="row">
-		<div class="col-lg-2 m-top-big">
+		<div class="col-lg-2 offset-lg-0 col-6 offset-3 m-top-big">
 			<%=image_tag @etablissement.profil.url, class:"img-fluid logo"%>
 		</div>
 	</div>
@@ -13,30 +13,35 @@
 		    	   <h2 class="text-maj text-bold"><%= @etablissement.nom %></h2>
 			       <h5 class="text-maj text-bold m-top">informations</h5>
 		       			<hr>
-			       			<div class="row">
-				<div class="col-lg-4 col-12">
+			       			<div class="row informations">
+				<div class="col-lg-4 col-6 m-top-mini">
 				      <h5><i class="fas fa-phone-square-alt"></i> <%= @etablissement.telephone %></h5>
 				</div>
-			<div class="col-lg-4 col-12">
+			<div class="col-lg-4 col-6 m-top-mini">
 			       <h5><i class="fas fa-envelope"></i> <%= @etablissement.email %></h5>
 			</div>
-			<div class="col-lg-4 col-12">
+			<div class="col-lg-4 col-6 m-top-mini">
 			        <h5><i class="fas fa-globe-africa"></i> <%= @etablissement.site %></h5>
 			</div>
-			<div class="col-lg-4 col-12 m-top-mini">
+			<div class="col-lg-4 col-6 m-top-mini">
 			        <h5><i class="fas fa-map-marker-alt"></i> <%= @etablissement.adresse %></h5>
 			</div>
-			<div class="col-lg-4 col-12 m-top-mini">
+			<div class="col-lg-4 col-6 m-top-mini">
 			        <h5><i class="fas fa-flag"></i> <%= @etablissement.country.nom %></h5>
 			</div>
-			<div class="col-lg-4 col-12 m-top-mini">
+			<div class="col-lg-4 col-6 m-top-mini">
 			         <h5><i class="fas fa-archive"></i> <%= @etablissement.category.titre %></h5>
 			 </div>
 			</div>
 			<hr>
-			<a href="tel: <%= @etablissement.telephone %>" class="btn btn-appel btn-lg text-maj text-bold"><i class="fas fa-phone-square-alt"></i> Appeler</a>
-			<a href="mailto: <%= @etablissement.email %>" class="btn btn-mail btn-lg text-maj text-bold"><i class="fas fa-envelope"></i> Envoyer un email</a>
-			<a href="<%= @etablissement.site %>" class="btn btn-site btn-lg text-maj text-bold d-none"><i class="fas fa-globe-africa"></i> Visiter le site web</a>
+			<div class="row">
+			   			<div class="col-lg-4 col-6 m-top-mini">
+			                      <a href="tel: <%= @etablissement.telephone %>" class="btn btn-appel  text-maj text-bold"><i class="fas fa-phone-square-alt"></i> Appeler</a>
+			</div>
+			<div class="col-lg-4 col-6 m-top-mini">
+			         <a href="mailto: <%= @etablissement.email %>" class="btn btn-mail  text-maj text-bold"><i class="fas fa-envelope"></i> email</a>
+			 </div>
+			</div>
 			
 		    </div>
 		    <div class="col-lg-7 col-12 bg-white m-top ze-pad">
@@ -44,27 +49,24 @@
 			<hr>
 			<p><%= @etablissement.description %></p>
 		    </div>
-		    <div class="col-lg-4 offset-lg-1 col-12 bg-white m-top ze-pad">
-		    	    					<div class="row">
+		    <div class="col-lg-4 offset-lg-1 col-12 bg-white m-top ze-pad d-lg-block d-none">
+		    	    					<div class="row informations">
 					<div class="col-lg-6 offset-lg-3 m-top-mini">
 			<%=image_tag @etablissement.profil.url, class:"img-fluid"%>
 		</div>
-						<div class="col-lg-12 col-12 m-top-mini">
+						<div class="col-lg-12 col-6 m-top-mini">
 				      <h5><i class="fas fa-phone-square-alt"></i> <%= @etablissement.telephone %></h5>
 				</div>
-			<div class="col-lg-12 col-12">
+			<div class="col-lg-12 col-6">
 			       <h5><i class="fas fa-envelope"></i> <%= @etablissement.email %></h5>
 			</div>
 			<div class="col-lg-12 col-12 d-none">
 			        <h5><i class="fas fa-globe-africa"></i> <%= @etablissement.site %></h5>
 			</div>
-			<div class="col-lg-12 col-12 m-top-mini">
-			        <h5><i class="fas fa-map-marker-alt"></i> <%= @etablissement.adresse %></h5>
-			</div>
-			<div class="col-lg-12 col-12 m-top-mini">
+			<div class="col-lg-12 col-6 m-top-mini">
 			        <h5><i class="fas fa-flag"></i> <%= @etablissement.country.nom %></h5>
 			</div>
-			<div class="col-lg-12 col-12 m-top-mini">
+			<div class="col-lg-12 col-6 m-top-mini">
 			         <h5><i class="fas fa-archive"></i> <%= @etablissement.category.titre %></h5>
 			 </div>
 					</div>
@@ -75,7 +77,7 @@
 			<div class="row">  	      
 			    	   	      	      		<%@etablissements_similaires.each do |etablissement|%>
 			    	   	      	      		
-		<div class=" col-lg-4 col-12">
+		<div class=" col-lg-4 col-6">
 				<figure class="snip1336">
  						<div class="cover" style="background: url('<%=etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center;">
  							
@@ -85,7 +87,7 @@
       							<%=image_tag etablissement.profil.url,class:"profile"%>
     							<h2><%=etablissement.nom%><span><%=etablissement.country.nom%></span></h2>
     							<a href="<%=etablissement.site%>" class="follow d-none" target="_blank">Site Web</a>
-    							<%=link_to "Informations", etablissement, class:"info"%>
+    							<%=link_to "Informations", etablissement, class:"follow"%>
   						</figcaption>
 					</figure>
 		</div>

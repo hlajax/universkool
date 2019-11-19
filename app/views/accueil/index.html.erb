@@ -7,7 +7,7 @@
   <div class="container h-100">
     <div class="d-flex h-100 text-center align-items-center">
       <div class="w-75 m-auto text-white">
-        <h1 class="display-4">Vous cherchez un établissement?</h1>
+        <h1 class="display-lg-4 display-12">Vous cherchez un établissement?</h1>
         <p class="lead mb-0">Notre mission ? Vous aider à le trouver.
 Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie et à vous y épanouir. </p>
       </div>
@@ -45,7 +45,7 @@ Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie
 			    	   	      
 			    	   	      	      		<%@etablissements.each do |etablissement|%>
 			    	   	      	      		
-		<div class=" col-lg-3 col-12">
+		<div class=" col-lg-3 col-6">
 				<figure class="snip1336">
  						<div class="cover" style="background: url('<%=etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center;">
  							
@@ -55,7 +55,7 @@ Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie
       							<%=image_tag etablissement.profil.url,class:"profile"%>
     							<h2><%=etablissement.nom%><span><%=etablissement.country.nom%></span></h2>
     							<a href="<%=etablissement.site%>" class="follow d-none" target="_blank">Site Web</a>
-    							<%=link_to "Informations", etablissement, class:"info"%>
+    							<%=link_to "Informations", etablissement, class:"follow"%>
   						</figcaption>
 					</figure>
 		</div>

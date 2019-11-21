@@ -1,38 +1,41 @@
 <%=render 'menus/main'%>
- <header>
-  <div class="overlay"></div>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="https://res.cloudinary.com/aseed/video/upload/v1571231028/Homework_-_1028_kuyehg.mp4" type="video/mp4">
-  </video>
-  <div class="container h-100">
-    <div class="d-flex h-100 text-center align-items-center">
-      <div class="w-75 m-auto text-white">
-        <h1 class="display-lg-4 display-12">Vous cherchez un établissement?</h1>
-        <p class="lead mb-0">Notre mission ? Vous aider à le trouver.
-Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie et à vous y épanouir. </p>
-      </div>
-    </div>
-  </div>
-</header>
-<div class="container-fluid">
+<div class="container-fluid main-bg">
+	<div class="row filtre-noir">
+		<div class="col-lg-6 offset-lg-1 col-12 m-top-big text-center">
+		          <h1 class="main-text">Prêt pour le grand saut ?</h1>
+                  <h5 class="submain-text">Intégrez une grande école ou université privée</h5>
+                 <span class="d-xl-block d-lg-block d-md-block d-none"><%=link_to "Liste des établissements", etablissements_path, class:"btn btn-appel text-bold text-maj m-top-xs" %></span>
+                 <span class="d-xl-none d-lg-none d-md-none d-block">
+                 <%=link_to "Liste des établissements", etablissements_path, class:"btn btn-appel btn-sm text-bold text-maj m-top-xs" %>
+                 </span>
+		</div>
+	</div>
+</div>
+<div class="container-fluid bg-white">
 	<div class="row">
-		<div class="col-lg-6 col-12" style="background:url('https://images.pexels.com/photos/1181327/pexels-photo-1181327.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')no-repeat; background-size:cover;background-position:center ;height:500px;">
-			
+		<div class="col-lg-8 offset-lg-2 col-12 bg-white text-center m-top m-bottom">
+		        <h5 class="text-intro">
+		                   Choisir son établissement ou son école ne doit pas être laissé au hasard. 
+		                   <br>Reconnaissance ou accréditation de l'Etat, parcours, débouchés ou encore palmarès, rien ne doit vous échapper.
+		        </h5>
+                <h4 class="text-nous m-top-mini">
+                            Ici, nous avons réuni les meilleurs établissements <br>et nous vous aidons à trouver votre voie.
+               </h4>
+               <h1 class="text-hash m-top-mini">#DREAMBIG </h1>
 		</div>
 		
-		<div class="col-lg-6 col-12 bg-head text-white text-center">
-		        <h5 class="text-bold m-top-big">Vous cherchez un établissement?</h5>
-
-<h4 class="m-top-mini">
-Notre mission ? Vous aider à en prendre conscience.
-Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie et à vous y épanouir.
-</h4>
-
-<h1 class="text-bold text-maj m-top-mini">#WEVEGOTYOURBACK</h1>
-	
-	<%=link_to "voir tous les établissements", etablissements_path ,class:"btn btn-white btn-lg text-maj text-bold m-top" %>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row fac-bg">
+	      
+		<div class="col-lg-6  col-7 ze-pad m-top-sm">
+		          <p class="fac-text">
+		          	     Universkool vous propose un large choix de prestigieuses écoles et universités sélectionnées parmi ce qui se fait de mieux dans le monde de la formation. 
+		          </p>
+                  <h5 class="sub-text">Découvrez les ci-dessous</h5>
+                 
 		</div>
-		
 	</div>
 </div>
 <div class="container-fluid">
@@ -68,6 +71,22 @@ Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie
 		</div>
 	</div>
 </div>
+<div class="container-fluid">
+	<div class="row blog-bg text-right">
+         		<div class="col-lg-6 offset-lg-6 col-7 offset-5 m-top-sm">
+		          <p class="blog-text">
+		          	     Au moment où vous lisez ce texte, vous n'êtes peut-être pas sûr (e) de ce que vous voulez faire dans la vie. <br>
+Nous avons été comme vous et c'est pourquoi nous avons pensé à un blog où vous trouverez des pistes de solution à vos grandes questions.
+		          </p>
+                  <div class="row">
+                           <div class="col-lg-12 col-12 text-center m-top-mini m-bottom-mini">
+			<%=link_to "découvrez le blog", articles_path ,class:"btn btn-appel btn-lg text-maj text-bold" %>
+		</div>
+                  </div>
+                 
+		</div>
+	</div>
+</div>
 
 
 <div class="container-fluid">
@@ -85,10 +104,7 @@ Comment ? En vous donnant toutes les clés pour vous aider à trouver votre voie
                                          <%=article.titre%>
                                          <%end%>
                                          </h3>
-                                         <footer>
-                                               <div class="views"><%=link_to "lire l'article", article, class:"nav-article"%></div>
-                                         </footer>
-                               </div><%=link_to "", article%>
+                               </div>
                       </div>
 			      </div>
 			<% end %>

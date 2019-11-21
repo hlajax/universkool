@@ -101,6 +101,9 @@ body{
 .m-top-big{
 	margin-top: 15%;
 }
+.m-top-sm{
+	margin-top: 10%;
+}
 .m-top{
 	margin-top: 5%;
 }
@@ -146,46 +149,84 @@ body{
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   background-color: white;
 }
-header {
-  position: relative;
-  background-color: black;
-  height: 75vh;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
+	.main-bg{
+		background: url('https://res.cloudinary.com/aseed/image/upload/v1574294047/Photo_accueil_lixs6x.jpg')no-repeat;
+		background-size:cover;
+		background-position:center;
+	}
+	.filtre-noir{
+		background-color: rgba(0,0,0, .5);
+		color: white;
+		height: 500px;
+		padding: 0%;
+	}
+.main-text{
+	font-size:36px;
+	font-weight: 800;
+	text-transform: uppercase;
 }
-
-header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+.submain-text{
+	font-size:20px;
+	text-transform: uppercase;
 }
-
-header .container {
-  position: relative;
-  z-index: 2;
+.sub-text{
+	font-size:16px;
+	text-transform: none;
+	color: white;
+	font-weight: bold;
 }
-
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
+	
+.text-intro{
+	font-size:24px;
+	font-weight:normal;
+	text-transform:none;
 }
-
+	
+.text-nous{
+	font-size:24px;
+	font-weight:800;
+	text-transform:uppercase;
+	margin-top: 3%;
+}
+	
+.text-hash{
+	font-size:50px;
+	font-weight:800;
+	text-transform:uppercase;
+	margin-top: 5%;
+}
+	.fac-bcg{
+		background-color: #FF7169;
+		padding:0%;
+	}
+	.fac-bg{
+		background: url('https://res.cloudinary.com/aseed/image/upload/v1574302174/lestudents_ti2biv.jpg')no-repeat;
+		background-size:cover;
+		background-position:center;
+		height: 500px;
+	}
+.fac-text{
+	font-size:24px;
+	font-weight: 800;
+	text-transform: uppercase;
+	color:white;
+}
+.blo-bcg{
+		background-color: #46BDE7;
+		padding:5%;
+	}
+	.blog-bg{
+		background: url('https://res.cloudinary.com/aseed/image/upload/v1574303873/mosi_paid3v.jpg')no-repeat;
+		background-size:cover;
+		background-position:center;
+		height: 500px;
+	}
+.blog-text{
+	font-size:24px;
+	font-weight: 800;
+	text-transform: uppercase;
+	color:white;
+}
 .e-cover{
 	height:300px; 
 	}
@@ -495,45 +536,87 @@ figure.snip1312.hover img {
 	.entete{
 	   font-size: 16px;	
 	}
-header {
-  position: relative;
-  background-color: black;
-  height: 75vh;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
+	.main-bg{
+		background: url('https://res.cloudinary.com/aseed/image/upload/v1574294047/Photo_accueil_lixs6x.jpg')no-repeat;
+		background-size:cover;
+		background-position:center;
+	}
+	.filtre-noir{
+		background-color: rgba(0,0,0, .5);
+		color: white;
+		height: auto;
+		padding: 5%;
+	}
+.main-text{
+	font-size:16px;
+	font-weight: 800;
+	text-transform: uppercase;
 }
+.submain-text{
+	font-size:10px;
+	text-transform: uppercase;
+}
+	
+.sub-text{
+	font-size:12px;
+	text-transform: none;
+	color: white;
+	font-weight: bold;
+}
+	
+.text-intro{
+	font-size:14px;
+	font-weight:normal;
+	text-transform:none;
+}
+	
+.text-nous{
+	font-size:14px;
+	font-weight:800;
+	text-transform:uppercase;
+	margin-top: 3%;
+}
+	
+.text-hash{
+	font-size:24px;
+	font-weight:800;
+	text-transform:uppercase;
+	margin-top: 5%;
+}
+	
+.fac-bcg{
+		background-color: #FF7169;
+		padding:0%;
+	}
+	.fac-bg{
+		background: url('https://res.cloudinary.com/aseed/image/upload/v1574302174/lestudents_ti2biv.jpg')no-repeat;
+		background-size:cover;
+		background-position:center;
+		height: auto;
+	}
+.fac-text{
+	font-size:14px;
+	font-weight:normal;
+	text-transform:none;
+	color:white;
+}
+.blo-bcg{
+		background-color: #46BDE7;
+		padding:5%;
+	}
+	.blog-bg{
+		background: url('https://res.cloudinary.com/aseed/image/upload/v1574303873/mosi_paid3v.jpg')no-repeat;
+		background-size:cover;
+		background-position:center;
+		height: auto;
+	}
+.blog-text{
+		font-size:14px;
+	font-weight:normal;
+	text-transform:none;
+	color:white;
+}	
 
-header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-header .container {
-  position: relative;
-  z-index: 2;
-}
-
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
-}
 .e-cover{
 	height:150px; 
 	}

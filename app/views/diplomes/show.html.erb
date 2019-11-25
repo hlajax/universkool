@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @diplome.titre %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @diplome.description %>
+</p>
+
+<%= link_to 'Edit', edit_diplome_path(@diplome) %> |
+<%= link_to 'Back', diplomes_path %>

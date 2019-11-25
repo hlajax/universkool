@@ -26,7 +26,7 @@
 		
 	</div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid d-xl-block d-lg-block d-md-block d-none">
 	<div class="row fac-bg">
 	      
 		<div class="col-lg-6  col-7 ze-pad m-top-sm">
@@ -38,10 +38,25 @@
 		</div>
 	</div>
 </div>
+
+<div class="container-fluid d-xl-none d-lg-none d-md-none d-block">
+	<div class="row">
+	      <div class="col-12">
+	      	<img  class="img-fluid" src="https://res.cloudinary.com/aseed/image/upload/v1574302174/lestudents_ti2biv.jpg">
+	      </div>
+		<div class="col-12 ze-pad m-top-xs">
+		          <p class="fac-text">
+		          	     Universkool vous propose un large choix de prestigieuses écoles et universités sélectionnées parmi ce qui se fait de mieux dans le monde de la formation. 
+		          </p>
+                  <h5 class="facsub-text">Découvrez les ci-dessous</h5>
+                 
+		</div>
+	</div>
+</div>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-lg-12 col-12 text-center m-top-mini">
-			<h2 class="text-bold text-maj">les écoles à la une</h2>
+			<h2 class="main-text">les écoles à la une</h2>
 		</div>
 		<div class="col-lg-12 col-12 text-center m-top-mini">
 			    <div class="row">
@@ -66,12 +81,17 @@
 			    	   	      
 			    </div>
 		</div>
-		<div class="col-lg-12 col-12 text-center m-top-mini m-bottom-mini">
+		<div class="col-lg-12 col-12 text-center m-top-mini m-bottom-mini d-xl-block d-lg-block d-md-block d-none">
 			<%=link_to "voir tous les établissements", etablissements_path ,class:"btn btn-appel btn-lg text-maj text-bold" %>
 		</div>
+		
+		<div class="col-lg-12 col-12 text-center m-top-mini m-bottom-mini d-xl-none d-lg-none d-md-none d-block">
+			<%=link_to "voir tous les établissements", etablissements_path ,class:"btn btn-appel btn-sm text-maj text-bold" %>
+		</div>
+		
 	</div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid d-xl-block d-lg-block d-md-block d-none">
 	<div class="row blog-bg text-right">
          		<div class="col-lg-6 offset-lg-6 col-7 offset-5 m-top-sm">
 		          <p class="blog-text">
@@ -88,14 +108,41 @@ Nous avons été comme vous et c'est pourquoi nous avons pensé à un blog où v
 	</div>
 </div>
 
+<div class="container-fluid d-xl-none d-lg-none d-md-none d-block">
+	<div class="row">
+        		<div class="col-12">
+        			<img class="img-fluid" src="https://res.cloudinary.com/aseed/image/upload/v1574303873/mosi_paid3v.jpg">
+        		</div>
+         		<div class="col-12 m-top-sm">
+		          <p class="blog-text">
+		          	     Au moment où vous lisez ce texte, vous n'êtes peut-être pas sûr (e) de ce que vous voulez faire dans la vie. <br>
+Nous avons été comme vous et c'est pourquoi nous avons pensé à un blog où vous trouverez des pistes de solution à vos grandes questions.
+		          </p>
+                  <div class="row">
+                           <div class="col-lg-12 col-12 text-center m-top-mini m-bottom-mini d-xl-block d-lg-block d-md-block d-none">
+			<%=link_to "découvrez le blog", articles_path ,class:"d-xl-block d-lg-block d-md-block d-none btn btn-appel btn-lg text-maj text-bold" %>
+		</div>
+                 
+                     <div class="col-lg-12 col-12 text-center m-top-mini m-bottom-mini d-xl-none d-lg-none d-md-none d-block">
+			<%=link_to "découvrez le blog", articles_path ,class:"d-xl-none d-lg-none d-md-none  btn btn-appel btn-sm text-maj text-bold" %>
+		</div>
+                 
+                 
+                  </div>
+                 
+		</div>
+	</div>
+</div>
+
+
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-lg-12 col-12 m-top-mini">
-	          <h2 class="text-maj text-bold text-center">nos conseils en orientation <br>et développement personnel</h2>
+		<div class="col-lg-12 col-12 m-top-mini text-center">
+	          <h2 class="main-text">nos conseils en orientation <br>et développement personnel</h2>
 		       <div class="row m-top">
 			<%@articles.each do |article| %>
-			      <div class="col-lg-3 col-12">
+			      <div class="col-lg-3 col-6">
 			      	     <div class="article-card">
                                  <%=image_tag article.photo.url%>
                                  <div class="panel">
@@ -109,7 +156,8 @@ Nous avons été comme vous et c'est pourquoi nous avons pensé à un blog où v
 			      </div>
 			<% end %>
 		  <div class="col-lg-12 col-12 text-center m-top-mini m-bottom-mini">
-			<%=link_to "voir tous les articles", articles_path ,class:"btn btn-appel btn-lg text-maj text-bold" %>
+			<%=link_to "voir tous les articles", articles_path ,class:"d-xl-block d-lg-block d-md-block d-none btn btn-appel btn-lg text-maj text-bold" %>
+			<%=link_to "voir tous les articles", articles_path ,class:"d-xl-none d-lg-none d-md-none  btn btn-appel btn-sm text-maj text-bold" %>
 		</div>
 			  </div>
 		</div>

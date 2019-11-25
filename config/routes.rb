@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :diplomes
   devise_for :utilisateurs
   resources :articles
   devise_for :administrateurs

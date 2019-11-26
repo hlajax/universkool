@@ -63,12 +63,12 @@
 			    	   	      
 			    	   	      	      		<%@etablissements.each do |etablissement|%>
 			    	   	      	      		
-		<div class=" col-lg-3 col-6">
+		<div class=" col-lg-3 offset-lg-0 col-10 offset-1">
 				<figure class="snip1336">
- 						<div class="cover" style="background: url('<%=etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center;">
+ 						<div class="cover d-none" style="background: url('<%=etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center;">
  							
  						</div>
-  						
+  						<%=image_tag etablissement.cover.url%>
   						<figcaption>
       							<%=image_tag etablissement.profil.url,class:"profile"%>
     							<h2><%=etablissement.nom%><span><%=etablissement.country.nom%></span></h2>

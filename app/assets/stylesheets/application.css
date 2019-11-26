@@ -506,7 +506,7 @@ figure.snip1312.hover img {
 
 	.dropdown-item{
 	color: black;
-	font-size: 10px;
+	font-size: 12px;
 	font-weight: bold;
 	text-transform: uppercase;
 	transition: all .5s ease;
@@ -643,24 +643,14 @@ figure.snip1312.hover img {
 	height:150px; 
 	}
 .snip1336 {
-  font-family: 'Open Sans', sans-serif;
   position: relative;
   overflow: hidden;
   width: 100%;
-  color: black;
+  color: #ffffff;
+	height: auto;
   text-align: left;
   line-height: 1.4em;
   background-color: white;
-  height: 300px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-.cover{
-	height: 170px;
-}
-.card{
-	background-color: transparent;
-	border: 1px solid #ccc;
-	padding: 3%;
 }
 .snip1336 * {
   -webkit-box-sizing: border-box;
@@ -675,10 +665,9 @@ figure.snip1312.hover img {
 }
 .snip1336 figcaption {
   width: 100%;
-  background-color: #ffffff;
-  padding: 10px;
+  background-color: white;
+  padding: 25px;
   position: relative;
-	text-align: center;
 }
 .snip1336 figcaption:before {
   position: absolute;
@@ -694,13 +683,13 @@ figure.snip1312.hover img {
 .snip1336 figcaption a {
   padding: 5px;
   border: 1px solid #ffffff;
-  color: #000000;
+  color: #ffffff;
   font-size: 0.7em;
   text-transform: uppercase;
   margin: 10px 0;
   display: inline-block;
   opacity: 0.65;
-  width: 47%;
+  width: 100%;
   text-align: center;
   text-decoration: none;
   font-weight: 600;
@@ -709,37 +698,34 @@ figure.snip1312.hover img {
 .snip1336 figcaption a:hover {
   opacity: 1;
 }
+
 .snip1336 .profile {
   border-radius: 0%;
   border: 5px solid #f22f08;
   background-color: white;
   position: absolute;
   bottom: 100%;
-  left: 30px;
+  left: 25px;
   z-index: 1;
   max-width: 90px;
   opacity: 1;
-}
+}	
 .snip1336 .follow {
   margin-right: 4%;
   border-color: #f22f08;
   color: #f22f08;
-	width: auto;
-	font-size: 8px;
 }
-
 .snip1336 h2 {
   margin: 0 0 5px;
-  font-weight: 800;
-	color:black;
-	text-transform: uppercase;
-	font-size: 12px;
+  font-weight: 300;
+	color: black;
+	font-size: 14px;
+	font-weight: 800;
 }
 .snip1336 h2 span {
   display: block;
-  font-size: 0.6em;
+  font-size: 10px;
   color: #f22f08;
-	margin-top: .5%;
 }
 .snip1336 p {
   margin: 0 0 10px;
@@ -747,6 +733,7 @@ figure.snip1312.hover img {
   letter-spacing: 1px;
   opacity: 0.8;
 }
+
 /*-------etablissements------*/
 /*----------articles-------------*/
 figure.snip1312 {
@@ -882,7 +869,7 @@ figure.snip1312.hover img {
   font-weight: 800;
   text-transform: uppercase;
 	color: #f22f08;
-	font-size: 14px;
+	font-size: 10px;
 	text-align: center;
 }
 .article-card h3 a{

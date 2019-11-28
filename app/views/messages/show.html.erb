@@ -1,5 +1,8 @@
-<p id="notice"><%= notice %></p>
-
+<%=render 'menus/main'%>
+<div class="container-fluid">
+	<div class="row">
+	       <div class="col-lg-8 offset-lg-2 col-12   m-top m-bottom bg-white ze-pad">
+<%if administrateur_signed_in?%>
 <p>
   <strong>Nom:</strong>
   <%= @message.nom %>
@@ -22,8 +25,15 @@
 
 <p>
   <strong>Contenu:</strong>
-  <%= @message.contenu %>
+  <%= raw(@message.contenu) %>
 </p>
 
 <%= link_to 'Edit', edit_message_path(@message) %> |
 <%= link_to 'Back', messages_path %>
+<%else%>
+<h4 class="text-center text-success" id="notice"><%= notice %></h4>
+<% end %>
+		</div>
+	</div>
+</div>
+<%=render 'footers/main-footer'%>

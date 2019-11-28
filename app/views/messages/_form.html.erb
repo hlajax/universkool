@@ -1,0 +1,53 @@
+<%= render 'menus/main' %>
+<div class="container-fluid">
+	<div class="row">
+	<div class="col-lg-12  col-12 text-center ze-pad bg-white">
+	      	      <h2 class="text-bold text-maj  entete">contactez-nous</h2>
+	      </div>
+		<div class="col-lg-6 offset-lg-3 col-12 contact-form m-top-mini m-bottom ze-pad">
+ <%= form_with(model: message, local: true) do |form| %>
+  <% if message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+      <ul>
+        <% message.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group col-lg-12 col-12">
+    <strong><%= form.label :nom %></strong>
+    <%= form.text_field :nom, class:"form-control", placeholder:"Quel est votre nom?" %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <strong><%= form.label :email %></strong>
+    <%= form.text_field :email, class:"form-control", placeholder:"Via quel adresse e-mail souhaitez-vous être contacté?" %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <strong><%= form.label :telephone %></strong>
+    <%= form.text_field :telephone, class:"form-control", placeholder:"Via quel numéro de téléphone souhaitez-vous être contacté?" %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <strong><%= form.label :ville %></strong>
+    <%= form.text_field :ville, class:"form-control", placeholder:"Vous êtes dans quelle ville?" %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <strong><%= form.label :Comment_pouvons_nous_vous_aider? %></strong>
+    <%= form.text_area :contenu, class:"form-control", placeholder:"Quel est votre nom?" %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <%= form.submit "Envoyer le message", class:"form-control btn btn-appel text-bold text-maj" %>
+  </div>
+<% end %>
+</div>
+	</div>
+</div>
+<%=render 'footers/main-footer'%>

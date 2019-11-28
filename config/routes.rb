@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :messages
+  resources :demandes
   resources :diplomes
   devise_for :utilisateurs
   resources :articles

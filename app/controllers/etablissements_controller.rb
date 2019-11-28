@@ -4,7 +4,9 @@ class EtablissementsController < ApplicationController
   # GET /etablissements
   # GET /etablissements.json
   def index
-    @etablissements = Etablissement.all
+    #@etablissements = Etablissement.all
+	@q = Etablissement.ransack(params[:q])
+    @etablissements = @q.result(distinct: true)
   end
 
   # GET /etablissements/1

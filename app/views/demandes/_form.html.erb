@@ -1,0 +1,38 @@
+		<div class="col-lg-7 col-12 bg-white ze-pad m-top-mini">
+			<h4 class="text-maj text-bold">Pré-inscription</h4>
+		       			<hr>
+				    <%= form_for @demande  do |form| %>
+				    <div class="row">
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :nom %>
+    <%= form.text_field :nom, class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :telephone %>
+    <%= form.text_field :telephone, class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :email %>
+    <%= form.text_field :email, class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-6 col-12">
+    <%= form.label :ecole %>
+    <%= form.text_field :objet, value: @etablissement.nom, class:"form-control" %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <%= form.label :Votre_demande %>
+    <%= form.text_area :contenu %>
+  </div>
+
+  <div class="form-group col-lg-12 col-12">
+    <%= form.submit "Confirmer la Pré-inscription", class:"btn btn-appel text-bold text-maj" %>
+  </div>
+  	</div>
+<% end %>
+
+		
+		</div>

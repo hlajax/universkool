@@ -1,0 +1,40 @@
+<%= render 'menus/main' %>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 offset-lg-2 col-12 bg-white m-top m-bottom ze-pad">
+<p class="text-success m-top" role="alert" id="notice"><%= notice %></p>
+<p>
+  <strong>Nom:</strong>
+  <%= @demande.nom %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @demande.telephone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @demande.email %>
+</p>
+
+<p>
+  <strong class="text-cap">école choisie:</strong>
+  <%= @demande.objet %>
+</p>
+
+<p>
+  <strong>Demande:</strong>
+</p>
+<p>
+  <%= raw(@demande.contenu) %>
+</p>
+<%if administrateur_signed_in?%>
+<%= link_to 'Edit', edit_demande_path(@demande) %> |
+<%= link_to 'Back', demandes_path %>
+<%else%>
+<%end%>
+		</div>
+	</div>
+</div>
+<%=render 'footers/main-footer'%>

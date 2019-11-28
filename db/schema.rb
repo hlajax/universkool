@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_100959) do
+ActiveRecord::Schema.define(version: 2019_11_28_122051) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,11 +59,25 @@ ActiveRecord::Schema.define(version: 2019_11_25_100959) do
     t.index ["slug"], name: "index_countries_on_slug", unique: true
   end
 
+  create_table "demandes", force: :cascade do |t|
+    t.string "nom"
+    t.string "telephone"
+    t.string "email"
+    t.string "objet"
+    t.text "contenu"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_demandes_on_slug", unique: true
+  end
+
   create_table "diplomes", force: :cascade do |t|
     t.string "titre"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_diplomes_on_slug", unique: true
   end
 
   create_table "etablissements", force: :cascade do |t|
@@ -96,6 +110,16 @@ ActiveRecord::Schema.define(version: 2019_11_25_100959) do
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "nom"
+    t.string "email"
+    t.string "telephone"
+    t.string "ville"
+    t.text "contenu"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "utilisateurs", force: :cascade do |t|

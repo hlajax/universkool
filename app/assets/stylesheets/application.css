@@ -266,6 +266,9 @@ body{
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
+.snip1336 {
+	min-height: 100%;
+}
 .snip1336 img {
   max-width: 100%;
   vertical-align: top;
@@ -321,6 +324,7 @@ body{
   margin-right: 4%;
   border-color: #f22f08;
   color: #f22f08;
+	width: 100%;
 }
 
 .snip1336 h2 {
@@ -680,6 +684,11 @@ figure.snip1312.hover img {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
+
+.snip1336 {
+	min-height: 100%;
+}
+	
 .snip1336 img {
   max-width: 100%;
   vertical-align: top;

@@ -21,10 +21,13 @@ body{
 	background-color:#0878a4;
 }
 .text-logo{
-	color:#0878a4;
-	font-size: 28px;
+	color:white;
+	font-size: 24px;
 	font-weight: bold;
 	text-transform: uppercase;
+}
+.text-logo a{
+	color:white;
 }
 .text-logo a:hover{
 	text-decoration: none;
@@ -57,6 +60,42 @@ body{
 	background-color: white;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0);
 
+}
+.bg-ored{
+	background-color: #f22f08;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0);
+
+}
+.navbar-toggler{
+	background-color: #f22f08;
+}
+.navbar-toggler-icon{
+	background-color: red;
+}
+.navbar-light{
+	color:white;
+}
+.navbar-ored .nav-link{
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: all .5s ease;
+}
+.navbar-ored .nav-link:hover{
+	color:#f22f08;
+	background-color: white;
+}
+.bg-ored .nav-link{
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: all .5s ease;
+}
+.bg-ored .nav-link:hover{
+	color:#f22f08;
+	background-color: white;
 }
 .btn-white{
 	border-radius: 0px;

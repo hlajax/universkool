@@ -4,9 +4,24 @@ class EtablissementsController < ApplicationController
   # GET /etablissements
   # GET /etablissements.json
   def index
+	if params[:category].blank?
+       @etablissements = Etablissement.all.order("created_at DESC")
+	else
+		@category_id = Category.find_by(titre: params[:category]).id
+		@etablissements = Etablissement.where(category_id: @category_id).order("created_at DESC")
+	end
+  end
+	
+	
+  def search
     #@etablissements = Etablissement.all
+	if params[:category].blank?
 	@q = Etablissement.ransack(params[:q])
     @etablissements = @q.result(distinct: true)
+	else
+		@category_id = Category.find_by(titre: params[:category]).id
+		@etablissements = Etablissement.where(category_id: @category_id).order("created_at DESC")
+	end
   end
 
   # GET /etablissements/1

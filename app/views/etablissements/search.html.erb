@@ -1,24 +1,16 @@
-<%=render 'menus/main'%>
-
 <div class="container-fluid bg-head">
 	<div class="row">
-	      <div class="col-lg-8 offset-lg-2 col-12 text-center ze-pad-md">
+	      <div class="col-lg-8 offset-lg-2 col-12 text-center ze-pad-big">
 	      	      <h1 class="text-bold text-maj text-white entete">les établissements</h1>
+	      	      <h5 class="text-white">Trouvez rapidement un établissement</h5>
+	      	 
 	      </div>
 	</div>
 </div>
+
+
 <div class="container">
 	<div class="row">
-	   <div class="col-lg-3 col-12 m-top-mini bg-white ze-pad">
-   	      <h5 class="text-bold text-maj">Par Catégories</h5>
-	   	  <ul class="nav flex-column">
-	   	  	<%Category.all.each do |category| %>
-	   	  	     <li class="nav-item">
-	   	  	           <%=link_to category.titre, etablissements_path(category: category.titre), class:"nav-link"%>
-	   	  	     </li>
-	   	  	<% end %>
-	   	  </ul> 
-	   </div>
 		<div class="col-lg-9 col-12 text-center m-top-mini">
 			    <div class="row">
 			    	   	      
@@ -45,8 +37,3 @@
 
 	</div>
 </div>
-<%if administrateur_signed_in?%>
-<%= link_to 'New Etablissement', new_etablissement_path %>
-<%else%>
-<% end %>
-<%=render 'footers/main-footer'%>

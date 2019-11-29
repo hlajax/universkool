@@ -26,6 +26,9 @@ body{
 	font-weight: bold;
 	text-transform: uppercase;
 }
+.text-logo a:hover{
+	text-decoration: none;
+}
 .nav-link{
 	color: black;
 	font-size: 14px;
@@ -130,6 +133,9 @@ body{
 }
 .ze-pad-mini{
 	padding: 1.5%;
+}
+.ze-pad-md{
+	padding: 5%;
 }
 .text-bold{
 	font-weight: 800;

@@ -164,6 +164,12 @@ body{
 .m-bottom-xs{
 	margin-bottom: 1%;
 }
+.m-left{
+	margin-left: 5%;
+}
+.m-left-big{
+	margin-left: 10%;
+}
 .ze-pad{
 	padding: 3%;
 }
@@ -250,12 +256,12 @@ body{
 	.fac-bg{
 		background: url('https://res.cloudinary.com/aseed/image/upload/v1574302174/lestudents_ti2biv.jpg')no-repeat;
 		background-size:cover;
-		background-position:center;
+		background-position:right;
 		height: 500px;
 	}
 .fac-text{
-	font-size:24px;
-	font-weight: 800;
+	font-size:18px;
+	font-weight: normal;
 	text-transform: uppercase;
 	color:white;
 }
@@ -264,14 +270,14 @@ body{
 		padding:5%;
 	}
 	.blog-bg{
-		background: url('https://res.cloudinary.com/aseed/image/upload/v1574303873/mosi_paid3v.jpg')no-repeat;
+		background: url('https://res.cloudinary.com/aseed/image/upload/v1575040446/blog-bg_jfwvbv.jpg')no-repeat;
 		background-size:cover;
 		background-position:center;
 		height: 500px;
 	}
 .blog-text{
-	font-size:24px;
-	font-weight: 800;
+		font-size:16px;
+	font-weight: normal;
 	text-transform: uppercase;
 	color:white;
 }
@@ -538,7 +544,7 @@ figure.snip1312.hover img {
 
 #sticky-footer {
   flex-shrink: none;
-  background-color:#0878a4;
+  background-color:#f22f08;
 }
 .contact-form input[type="text"]{
 	height: 50px;
@@ -626,7 +632,7 @@ figure.snip1312.hover img {
 		padding: 5%;
 	}
 .main-text{
-	font-size:16px;
+	font-size:20px;
 	font-weight: 800;
 	text-transform: uppercase;
 }

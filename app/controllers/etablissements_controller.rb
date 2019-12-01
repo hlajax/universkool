@@ -3,13 +3,22 @@ class EtablissementsController < ApplicationController
   before_action :authenticate_administrateur!, except:[:index, :show]
   # GET /etablissements
   # GET /etablissements.json
-  def index
-	if params[:category].blank?
-       @etablissements = Etablissement.all.order("created_at DESC")
-	else
-		@category_id = Category.find_by(titre: params[:category]).id
-		@etablissements = Etablissement.where(category_id: @category_id).order("created_at DESC")
-	end
+def index
+    (@filterrific = initialize_filterrific(
+      Etablissement,
+      params[:filterrific],
+      select_options: {
+        sorted_by: Etablissement.options_for_sorted_by,
+        with_country_id: Country.options_for_select,
+		with_category_id: Category.options_for_select,
+      },
+    )) || return
+    @etablissements = @filterrific.find.page(params[:page])
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 	
 	

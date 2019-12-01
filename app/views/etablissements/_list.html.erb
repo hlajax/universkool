@@ -1,0 +1,33 @@
+<div class="card card-body bg-light d-block p-3 my-3">
+  <div class="row">
+    <div class="col-md-10">
+      <%= page_entries_info etablissements, :model => 'etablissement', :class => 'align-middle' %>
+    </div>
+    <div class="col-md-2">
+      <%= link_to "Reset filters", reset_filterrific_url, :class => 'btn btn-secondary align-middle' %>
+    </div>
+  </div>
+</div>
+<table class="table">
+  <tr>
+    <th>
+      <%= filterrific_sorting_link(@filterrific, :nom) %>
+    </th>
+    <th>Email</th>
+    <th>Country</th>
+    <th>Registered at</th>
+  </tr>
+  <% @etablissements.each do |etablissement| %>
+    <tr class="etablissement">
+      <td class="name">
+        <%= etablissement.nom %>
+      </td>
+      <td class="country">
+        <%= etablissement.country.nom %>
+      </td>
+      <td class="created_at">
+        <%= etablissement.created_at.to_date.to_s(:long) %>
+      </td>
+    </tr>
+  <% end %>
+</table>

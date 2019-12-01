@@ -1,5 +1,4 @@
 <%=render 'menus/main'%>
-
 <div class="container-fluid bg-head">
 	<div class="row">
 	      <div class="col-lg-8 offset-lg-2 col-12 text-center ze-pad-md">
@@ -7,44 +6,56 @@
 	      </div>
 	</div>
 </div>
-<div class="container">
-	<div class="row">
-	   <div class="col-lg-3 col-12 m-top-mini">
-   	      <h5 class="text-bold text-maj">Par Catégories</h5>
-	   	  <ul class="nav flex-column">
-	   	  	<%Category.all.each do |category| %>
-	   	  	     <li class="nav-item">
-	   	  	           <%=link_to category.titre, etablissements_path(category: category.titre), class:"nav-link"%>
-	   	  	     </li>
-	   	  	<% end %>
-	   	  </ul> 
-	   </div>
-		<div class="col-lg-9 col-12 text-center m-top-mini">
-			    <div class="row">
-			    	   	      
-			    	   	      	      		<%@etablissements.each do |etablissement|%>
-			    	   	      	      		
-		<div class=" col-lg-4 col-6">
-				<figure class="snip1336">
- 						<div class="cover" style="background: url('<%=etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center;">
- 							
- 						</div>
-  						
-  						<figcaption>
-      							<%=image_tag etablissement.profil.url,class:"profile"%>
-    							<h2><%=etablissement.nom%><span><%=etablissement.country.nom%></span></h2>
-    							<a href="<%=etablissement.site%>" class="follow d-none" target="_blank">Site Web</a>
-    							<%=link_to "Informations", etablissement, class:"follow"%>
-  						</figcaption>
-					</figure>
-		</div>
-<%end%>
-			    	   	      
-			    </div>
-		</div>
+<%# app/views/etablissements/index.html.erb %>
+<h1>etablissements</h1>
 
-	</div>
-</div>
+<%= form_for_filterrific @filterrific do |f| %>
+  <div>
+    Search
+    <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
+    <%= f.text_field(
+      :search_query,
+      class: 'filterrific-periodically-observed'
+    ) %>
+  </div>
+  <div>
+    Country
+    <%= f.select(
+      :with_country_id,
+      @filterrific.select_options[:with_country_id],
+      { include_blank: '- Any -' }
+    ) %>
+  </div>
+  
+    <div>
+    Country
+    <%= f.select(
+      :with_category_id,
+      @filterrific.select_options[:with_category_id],
+      { include_blank: '- Any -' }
+    ) %>
+  </div>
+  
+  
+  <div>
+    Registered after
+    <%= f.text_field(:with_created_at_gte, class: 'js-datepicker') %>
+  </div>
+  <div>
+    Sorted by
+    <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by]) %>
+  </div>
+  <div>
+    <%= link_to(
+      'Reset filters',
+      reset_filterrific_url,
+    ) %>
+  </div>
+<%=f.submit "valider"%>
+<% end %>
+
+<%= render 'etablissements/list', etablissements: @etablissements %>
+
 <%if administrateur_signed_in?%>
 <%= link_to 'New Etablissement', new_etablissement_path %>
 <%else%>

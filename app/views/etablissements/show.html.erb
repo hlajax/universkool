@@ -7,96 +7,44 @@
 		</div>
 	</div>
 </div>
-<div class="container">
+<div class="container-fluid bg-white">
 	<div class="row">
-		    <div class="col-lg-12 col-12 bg-white m-top ze-pad">
-		    	   <h2 class="text-maj text-bold"><%= @etablissement.nom %></h2>
-			       <h5 class="text-maj text-bold m-top">informations</h5>
-		       			<hr>
-			       			<div class="row informations">
-				<div class="col-lg-4 col-6 m-top-mini">
-				      <h5><i class="fas fa-phone-square-alt"></i> <%= @etablissement.telephone %></h5>
-				</div>
-			<div class="col-lg-4 col-6 m-top-mini">
-			       <h5><i class="fas fa-envelope"></i> <%= @etablissement.email %></h5>
-			</div>
-			<div class="col-lg-4 col-6 m-top-mini">
-			        <h5><i class="fas fa-globe-africa"></i> <%= @etablissement.site %></h5>
-			</div>
-			<div class="col-lg-4 col-6 m-top-mini">
-			        <h5><i class="fas fa-map-marker-alt"></i> <%= @etablissement.adresse %></h5>
-			</div>
-			<div class="col-lg-4 col-6 m-top-mini">
-			        <h5 class="text-cap"><i class="fas fa-flag"></i> <%= @etablissement.country.nom %></h5>
-			</div>
-			<div class="col-lg-4 col-6 m-top-mini">
-			         <h5><i class="fas fa-archive"></i> <%= @etablissement.category.titre %></h5>
-			 </div>
-			</div>
-			<hr>
-			<div class="row">
-			   			<div class="col-lg-6 col-6 m-top-mini">
-			                      <a href="tel: <%= @etablissement.telephone %>" class="btn btn-appel  text-maj text-bold"><i class="fas fa-phone-square-alt"></i> Appeler</a>
-			                      <a href="mailto: <%= @etablissement.email %>" class="btn btn-mail  text-maj text-bold"><i class="fas fa-envelope"></i> email</a>
-			</div>
-			</div>
-			
-		    </div>
-		    <div class="col-lg-7 col-12 bg-white m-top ze-pad">
-		    	   	<h4 class="text-maj text-bold m-top">description</h4>
+	    <div class="col-lg-7 offset-lg-1  col-12">
+	    	<h4 class="text-maj text-bold m-top">description</h4>
 			<hr>
 			<p><%= @etablissement.description %></p>
-		    </div>
-		    <div class="col-lg-4 offset-lg-1 col-12 bg-white m-top ze-pad d-lg-block d-none">
-		    	    					<div class="row informations">
-					<div class="col-lg-6 offset-lg-3 ze-pad-big">
-			<%=image_tag @etablissement.profil.url, class:"img-fluid"%>
-		</div>
-						<div class="col-lg-12 col-6 m-top">
-				      <p><i class="fas fa-phone-square-alt"></i> <%= @etablissement.telephone %></p>
-				</div>
-			<div class="col-lg-12 col-6">
-			       <p><i class="fas fa-envelope"></i> <%= @etablissement.email %></p>
-			</div>
-			<div class="col-lg-12 col-12 d-none">
-			        <p><i class="fas fa-globe-africa"></i> <%= @etablissement.site %></p>
-			</div>
-			<div class="col-lg-12 col-6 m-top-mini">
-			        <p class="text-cap"><i class="fas fa-flag"></i> <%= @etablissement.country.nom %></p>
-			</div>
-			<div class="col-lg-12 col-6 m-top-mini">
-			         <p class="text-cap"><i class="fas fa-archive"></i> <%= @etablissement.category.titre %></p>
-			 </div>
-					</div>
-		    </div>
-		    
-		    <%= render 'demandes/form', :@demande => Demande.new%>
-		    
-		     <div class="col-lg-4 offset-lg-1 col-12 bg-white m-top-mini m-bottom ze-pad">
-		     	    			<h4 class="text-maj text-bold">écoles similaires</h4>
-			<hr>
-			<div class="row">  	      
-			    	   	      	      		<%@etablissements_similaires.each do |etablissement|%>
-			    	   	      	      		
-<div class="card mb-3 m-top" style="max-width: 100%;">
-  <div class="row no-gutters">
-    <div class="col-md-3">
-      <%=image_tag etablissement.profil.url,class:"card-img"%>
-    </div>
-    <div class="col-md-9">
-      <div class="card-body">
-               <h5 class="card-title text-bold text-maj">
-                       <%=link_to etablissement do %>
-                        <%=etablissement.nom%>
-                        <% end%>
-                </h5>
-      </div>
-    </div>
-  </div>
-</div>
-<%end%>
-							</div>
-		     </div>
+             <%= render 'demandes/form', :@demande => Demande.new%>
+	    </div>
+	    <div class="col-lg-3 offset-lg-1 col-12 ze-pad">
+		    	 <div class="row informations">
+			            <div class="col-lg-12 col-6 mb-3 m-top-mini mini-sec">
+	                         <h4 class="text-maj text-bold text-center ">fiche technique</h4>
+	                          <hr>		                     
+	                          <h6>Nom:  <span class="text-maj text-bold"><%= @etablissement.nom %></span></h6>
+			                 <h6>Pays: <span class="text-cap"><%= @etablissement.country.nom %></span></h6>
+			                 <h6>Catégorie: <span class="text-cap"><%= @etablissement.category.titre %></span></h6>
+			           </div>
+			       </div>
+			       
+			       <div class="row informations">
+			            <div class="col-lg-12 col-6  mb-3 m-top mini-sec">
+	                         <h4 class="text-maj text-bold text-center ">coordonnées</h4>
+	                          <hr>
+		                     <h6>Téléphone:  <span class="text-maj text-bold"><%= @etablissement.telephone %></span></h6>
+			                 <h6>Email: <span class="text-cap"><%= @etablissement.email %></span></h6>
+			                 <h6>Adresse: <span class="text-cap"><%= @etablissement.adresse %></span></h6>
+			           </div>
+			       </div>
+			       
+			       <div class="row informations">
+			            <div class="col-lg-12 col-6  mb-3 m-top mini-sec text-center">
+	                         <h4 class="text-maj text-bold ">contacter</h4>
+	                          <hr>
+		                     <a href="tel: <%= @etablissement.telephone %>" class="btn btn-appel  text-maj text-bold"><i class="fas fa-phone-square-alt"></i> Appeler</a>
+			                      <a href="mailto: <%= @etablissement.email %>" class="btn btn-mail  text-maj text-bold"><i class="fas fa-envelope"></i> email</a>
+			           </div>
+			</div>	       
+		</div>    
 	</div>
 </div>
 <%if administrateur_signed_in?%>

@@ -1,34 +1,32 @@
 <div class="card card-body bg-light d-block p-3 my-3">
   <div class="row">
-    <div class="col-md-10">
+    <div class="col-lg-8">
       <%= page_entries_info etablissements, :model => 'etablissement', :class => 'align-middle' %>
     </div>
-    <div class="col-md-2">
-      <%= link_to "Reset filters", reset_filterrific_url, :class => 'btn btn-secondary align-middle' %>
+    <div class="col-lg-4">
+      <%= link_to "Réinitialiser les filtres", reset_filterrific_url, :class => 'btn btn-danger text-bold text-maj align-middle' %>
     </div>
   </div>
 </div>
-<table class="table">
-  <tr>
-    <th>
-      <%= filterrific_sorting_link(@filterrific, :nom) %>
-    </th>
-    <th>Email</th>
-    <th>Country</th>
-    <th>Registered at</th>
-  </tr>
-  <% @etablissements.each do |etablissement| %>
-    <tr class="etablissement">
-      <td class="name">
-        <%= etablissement.nom %>
-      </td>
-      <td class="country">
-        <%= etablissement.country.nom %>
-      </td>
-      <td class="created_at">
-        <%= etablissement.created_at.to_date.to_s(:long) %>
-      </td>
-    </tr>
+ <div class="col-lg-12 col-12">
+ 	<div class="row">
+ 		<% @etablissements.each do |etablissement| %>
+    		<div class=" col-lg-4 offset-lg-0 mb-3 col-10 offset-1">
+				<figure class="snip1336">
+ 						<div class="cover d-none" style="background: url('<%=etablissement.cover.url%>')no-repeat;background-size:cover;background-position:center;">
+ 							
+ 						</div>
+  						<%=image_tag etablissement.cover.url%>
+  						<figcaption>
+      							<%=image_tag etablissement.profil.url,class:"profile"%>
+    							<h2><%=etablissement.nom%><span><%=etablissement.country.nom%></span></h2>
+    							<a href="<%=etablissement.site%>" class="follow d-none" target="_blank">Site Web</a>
+    							<%=link_to "Informations", etablissement, class:"follow"%>
+  						</figcaption>
+					</figure>
+		</div>
   <% end %>
-</table>
 <%= will_paginate @etablissements %>
+ 	</div>
+ </div>
+  

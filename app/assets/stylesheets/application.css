@@ -192,16 +192,25 @@ body{
 	text-transform: capitalize;
 }
 .logo {
-  border-radius: 50%;
-  position: absolute;
-  top: 100%;
+  border-radius: 0%;
+  /*top: 100%;*/
   left: 25px;
-  z-index: 1;
+  /*z-index: 1;*/
   max-width: 150px;
   opacity: 1;
   border: 10px solid #f22f08;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   background-color: white;
+}
+.logo-petit {
+  border-radius: 0%;
+  margin-left: 25%;
+	margin-bottom: 5%;
+  max-width: 100px;
+}
+.mini-sec{
+	border: 1px solid black;
+	padding: 5%;
 }
 	.main-bg{
 		background: url('https://res.cloudinary.com/aseed/image/upload/v1574294047/Photo_accueil_lixs6x.jpg')no-repeat;

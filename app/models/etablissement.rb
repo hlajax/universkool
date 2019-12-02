@@ -34,12 +34,12 @@ class Etablissement < ApplicationRecord
     # configure number of OR conditions for provision
     # of interpolation arguments. Adjust this if you
     # change the number of OR conditions.
-    num_or_conditions = 1
+    num_or_conditions = 3
     where(
       terms.map {
         or_clauses = [
-          #"LOWER(etablissements.first_nom) LIKE ?",
-          #"LOWER(etablissements.last_nom) LIKE ?",
+          "LOWER(etablissements.nom) LIKE ?",
+          "LOWER(etablissements.nom) LIKE ?",
           "LOWER(etablissements.nom) LIKE ?"
         ].join(' OR ')
         "(#{ or_clauses })"
@@ -63,7 +63,7 @@ class Etablissement < ApplicationRecord
       order(etablissements[:nom].lower.send(direction))
     when /^country_nom_/
       # order("LOWER(countries.nom) #{ direction }").includes(:country)
-      etablissement.joins(:country).order(countries[:nom].lower.send(direction)).order(etablissements[:nom].lower.send(direction))
+      Etablissement.joins(:country).order(countries[:nom].lower.send(direction)).order(etablissements[:nom].lower.send(direction))
     else
       raise(ArgumentError, "Invalid sort option: #{sort_option.inspect}")
     end
@@ -85,10 +85,10 @@ scope :with_category_id, ->(category_ids) {
 
   def self.options_for_sorted_by
     [
-      ['nom (a-z)', 'nom_asc'],
-      ['Registration date (newest first)', 'created_at_desc'],
-      ['Registration date (oldest first)', 'created_at_asc'],
-      ['Country (a-z)', 'country_nom_asc']
+      ['nom des écoles (de a à z)', 'nom_asc'],
+      #['Registration date (newest first)', 'created_at_desc'],
+      #['Registration date (oldest first)', 'created_at_asc'],
+      ['nom des pays  (de a à z)', 'country_nom_asc']
     ]
   end
 

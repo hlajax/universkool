@@ -1,61 +1,44 @@
 <%=render 'menus/main'%>
-<div class="container-fluid bg-head">
-	<div class="row">
-	      <div class="col-lg-8 offset-lg-2 col-12 text-center ze-pad-md">
-	      	      <h1 class="text-bold text-maj text-white entete">les établissements</h1>
-	      </div>
-	</div>
-</div>
 <div class="container">
 	<div class="row">
-		<div class="col-lg-12 col-12 bg-white">
+		<div class="col-lg-12 col-12 bg-white m-top ze-pad">
 <%# app/views/etablissements/index.html.erb %>
-<h1>etablissements</h1>
+<h1 class="text-bold text-maj">etablissements</h1>
 
 <%= form_for_filterrific @filterrific do |f| %>
  <div class="row">
-  <div class="form-group col-lg-2 col-6">
-    Search
+  <div class="form-group col-lg-3 col-6">
+    Recherche par nom
     <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
     <%= f.text_field(
       :search_query,
       class: 'filterrific-periodically-observed form-control'
     ) %>
   </div>
-  <div class="form-group col-lg-2 col-6">
-    Country
+  <div class="form-group col-lg-3 col-6">
+    Pays
     <%= f.select(
       :with_country_id,
       @filterrific.select_options[:with_country_id],
-      { include_blank: '- Any -' }, class:"form-control"
+      { include_blank: '- Tout -' }, class:"form-control"
     ) %>
   </div>
   
-    <div class="form-group col-lg-2 col-6">
-    Country
+    <div class="form-group col-lg-3 col-6">
+    Type d'établissement
     <%= f.select(
       :with_category_id,
       @filterrific.select_options[:with_category_id],
-      { include_blank: '- Any -' }, class:"form-control"
+      { include_blank: '- Toutes -' }, class:"form-control"
     ) %>
   </div>
-  
-  
-  <div class="form-group col-lg-2 col-6">
-    Registered after
-    <%= f.text_field(:with_created_at_gte, class: 'js-datepicker', class:"form-control") %>
-  </div>
-  <div class="form-group col-lg-2 col-6">
-    Sorted by
+  <div class="form-group col-lg-3 col-6">
+    Trié par
     <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by], class:"form-control") %>
   </div>
-  <div class=" form-group col-lg-2 col-6">
-    <%= link_to(
-      'Reset filters',
-      reset_filterrific_url,
-    ) %>
+  <div class=" form-group col-lg-6 col-6">
+    <%=f.submit "valider & filtrer", class:"btn btn-appel text-bold text-maj"%>
   </div>
-<%=f.submit "valider"%>
 </div>
 <% end %>
 

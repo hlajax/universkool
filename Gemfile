@@ -24,6 +24,7 @@ gem 'ransack', '~> 2.3'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'filterrific'
 gem 'will_paginate', '~> 3.2', '>= 3.2.1'
+gem 'tinymce-rails', '~> 5.1', '>= 5.1.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

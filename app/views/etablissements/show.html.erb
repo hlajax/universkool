@@ -12,7 +12,8 @@
 	    <div class="col-lg-7 offset-lg-1  col-12">
 	    	<h4 class="text-maj text-bold m-top-big">description</h4>
 			<hr>
-			<p><%= @etablissement.description %></p>
+			<p class="contenu"><%= raw(@etablissement.description) %></p>
+            <hr>
              <%= render 'demandes/form', :@demande => Demande.new%>
 	    </div>
 	    <div class="col-lg-3 offset-lg-1 col-12 m-top ze-pad">

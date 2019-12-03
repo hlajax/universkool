@@ -238,7 +238,12 @@ body{
 	color: white;
 	font-weight: bold;
 }
-	
+.contenu p img{
+	width: 100%;
+}
+.contenu video{
+	width: 100%;
+}
 .text-intro{
 	font-size:24px;
 	font-weight:normal;

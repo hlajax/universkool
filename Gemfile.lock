@@ -207,6 +207,8 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    tinymce-rails (5.1.2)
+      railties (>= 3.1.1)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -259,6 +261,7 @@ DEPENDENCIES
   ransack (~> 2.3)
   sass-rails (~> 5)
   selenium-webdriver
+  tinymce-rails (~> 5.1, >= 5.1.2)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)

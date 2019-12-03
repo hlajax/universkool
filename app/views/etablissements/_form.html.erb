@@ -23,7 +23,7 @@
 
   <div class="form-group col-lg-12">
     <%= form.label :description %>
-    <%= form.text_area :description,class:"form-control" %>
+    <%= form.text_area :description,class:"form-control", cols: "50", rows: "30" %>
   </div>
 
   <div class="form-group col-lg-12">
@@ -67,7 +67,7 @@
  
   <div class="form-group col-lg-6">
     <%= form.label :pays %>
-    <%= form.collection_select :country_id, Country.all, :id, :nom, {prompt:"Sélectionnez un pays"},class:"form-control" %>
+    <%= form.collection_select :country_id, Country.all, :id, :nom, {prompt:"Sélectionnez un pays"}, class:"form-control" %>
   </div>
 
   <div class="form-group col-lg-6">
@@ -78,7 +78,7 @@
   
     <div class="form-group col-lg-6">
     <%= form.label :diplome %>
-    <%= form.collection_select :diplome_id, Diplome.all, :id, :titre, {prompt:"Sélectionnez une catégorie"}, class:"form-control" %>
+    <%= form.collection_select :diplome_id, Diplome.all, :id, :titre, {prompt:"Sélectionnez une catégorie"}, multiple: true, class:"form-control" %>
   </div>
 
   <div class="form-group col-lg-12">

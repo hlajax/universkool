@@ -10,7 +10,25 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/a518e61682.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tiny.cloud/1/15tc7oc36rxnouo2cz210ck40fm0js489kdx95chux0rr8y8/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-  <script>tinymce.init({selector:'textarea'});</script>
+  <script>tinymce.init({
+		  selector:'textarea',
+		  height: 500,
+  menubar: false,
+  plugins: [
+    'advlist autolink lists link image charmap print preview anchor',
+    'searchreplace visualblocks code fullscreen',
+    'insertdatetime media table paste code help wordcount'
+  ],
+  toolbar: 'undo redo | formatselect | ' +
+  ' bold italic backcolor | alignleft aligncenter ' +
+  ' alignright alignjustify | bullist numlist outdent indent |' +
+  ' removeformat | image| link| media| help',
+  content_css: [
+    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+    '//www.tiny.cloud/css/codepen.min.css'
+  ]
+	  });
+	  </script>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 

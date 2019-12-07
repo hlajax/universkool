@@ -3,41 +3,44 @@
 	<div class="row">
 		<div class="col-lg-12 col-12 bg-white m-top ze-pad">
 <%# app/views/etablissements/index.html.erb %>
-<h1 class="text-bold text-maj">etablissements</h1>
+<h3 class="text-bold text-maj">trouvez un établissement</h3>
 
 <%= form_for_filterrific @filterrific do |f| %>
- <div class="row">
-  <div class="form-group col-lg-3 col-6">
-    Recherche par nom
+ <div class="row bg-ored ze-pad">
+  <div class="form-group col-lg-6 col-6">
+    <span class="text-bold text-white">Recherche par nom</span>
     <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
     <%= f.text_field(
       :search_query,
-      class: 'filterrific-periodically-observed form-control'
+      class: 'filterrific-periodically-observed form-control  m-top-xs'
     ) %>
   </div>
-  <div class="form-group col-lg-3 col-6">
-    Pays
+  <div class="form-group col-lg-6 col-6">
+	  <span class="text-bold text-white">Pays</span>
     <%= f.select(
       :with_country_id,
       @filterrific.select_options[:with_country_id],
-      { include_blank: '- Tout -' }, class:"form-control"
+      { include_blank: '- Tout -' }, class:"form-control m-top-xs"
     ) %>
   </div>
   
-    <div class="form-group col-lg-3 col-6">
-    Type d'établissement
+    <div class="form-group col-lg-6 col-6">
+		<span class="text-bold text-white">Type d'établissement</span>
     <%= f.select(
       :with_category_id,
       @filterrific.select_options[:with_category_id],
-      { include_blank: '- Toutes -' }, class:"form-control"
+      { include_blank: '- Toutes -' }, class:"form-control  m-top-xs"
     ) %>
   </div>
-  <div class="form-group col-lg-3 col-6">
-    Trié par
-    <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by], class:"form-control") %>
+  <div class="form-group col-lg-6 col-6">
+	  <span class="text-bold text-white">Trier par</span>
+    <%= f.select(
+	:sorted_by, 
+	@filterrific.select_options[:sorted_by], class:"form-control  m-top-xs"
+	) %>
   </div>
   <div class=" form-group col-lg-6 col-6">
-    <%=f.submit "valider & filtrer", class:"btn btn-appel text-bold text-maj"%>
+    <%=f.submit "valider & filtrer", class:"btn btn-white text-bold text-maj"%>
   </div>
 </div>
 <% end %>

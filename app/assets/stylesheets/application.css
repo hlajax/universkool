@@ -99,15 +99,15 @@ body{
 }
 .btn-white{
 	border-radius: 0px;
-	color:#0878a4;
+	color:#f22f08;
 	background-color: white;
 	transition: all .3s ease;
 }
 .btn-white:hover{
 	border-radius: 0px;
 	color: white;
-	background-color: #0878a4;
-	border: 1px solid white;
+	background-color: white;
+	border: 1px solid #f22f08;
 }
 .btn-appel{
 	border-radius: 0px;

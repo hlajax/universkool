@@ -14,7 +14,29 @@
 			<hr>
 			<p class="contenu"><%= raw(@etablissement.description) %></p>
             <hr>
-             <%= render 'demandes/form', :@demande => Demande.new%>
+            <!-- Button trigger modal -->
+<button type="button" class="btn btn-appel btn-block text-maj text-bold" data-toggle="modal" data-target="#exampleModal">
+  Faire une demande de pré-inscription
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-maj text-bold" id="exampleModalLabel">Pré-inscription</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+               <p class="text-danger"> <small>Les champs précédés d'un * sont obligatoires</small></p>
+                <%= render 'demandes/form', :@demande => Demande.new%>
+      </div>
+    </div>
+  </div>
+</div>
+          
 	    </div>
 	    <div class="col-lg-3 offset-lg-1 col-12 order-lg-12 order-1 m-top ze-pad">
 		    	 <div class="row informations">

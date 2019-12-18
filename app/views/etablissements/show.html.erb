@@ -16,7 +16,7 @@
             <hr>
             <!-- Button trigger modal -->
 <button type="button" class="btn btn-appel btn-block text-maj text-bold" data-toggle="modal" data-target="#exampleModal">
-  Faire une demande de pré-inscription
+  Pré-inscription
 </button>
 
 <!-- Modal -->
@@ -46,18 +46,14 @@
 	                          <h6>Nom:  <span class="text-maj text-bold"><%= @etablissement.nom %></span></h6>
 			                 <h6>Pays: <span class="text-cap"><%= @etablissement.country.nom %></span></h6>
 			                 <h6>Catégorie: <span class="text-cap"><%= @etablissement.category.titre %></span></h6>
+			                 <h6>Téléphone:  <span class="text-maj text-bold"><%= @etablissement.telephone %></span></h6>
+			                 <h6>Email: <span class="text-cap"><%= @etablissement.email %></span></h6>
+			                 <h6>Adresse: <span class="text-cap"><%= @etablissement.adresse %></span></h6>
+			                 <button type="button" class="btn btn-appel btn-block text-maj text-bold" data-toggle="modal" data-target="#exampleModal">Pré-inscription
+</button>
 			           </div>
 			       </div>
 			       
-			       <div class="row informations">
-			            <div class="col-lg-12 col-6  mb-3 m-top mini-sec">
-	                         <h4 class="text-maj text-bold text-center ">coordonnées</h4>
-	                          <hr>
-		                     <h6>Téléphone:  <span class="text-maj text-bold"><%= @etablissement.telephone %></span></h6>
-			                 <h6>Email: <span class="text-cap"><%= @etablissement.email %></span></h6>
-			                 <h6>Adresse: <span class="text-cap"><%= @etablissement.adresse %></span></h6>
-			           </div>
-			       </div>
 			       
 			       <div class="row informations">
 			            <div class="col-lg-12 col-6  mb-3 m-top mini-sec text-center">

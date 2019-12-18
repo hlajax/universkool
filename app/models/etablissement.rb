@@ -19,7 +19,6 @@ class Etablissement < ApplicationRecord
   belongs_to :country
   belongs_to :category
   belongs_to :administrateur
-  belongs_to :diplome
 	
 	
   scope :search_query, ->(query) {

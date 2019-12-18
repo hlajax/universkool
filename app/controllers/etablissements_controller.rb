@@ -96,6 +96,6 @@ def index
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def etablissement_params
-      params.require(:etablissement).permit(:nom, :description, :profil, :cover, :telephone, :email, :site, :adresse,  :country_id, :category_id, :administrateur_id, :diplome_id)
+      params.require(:etablissement).permit(:nom, :description, :profil, :cover, :telephone, :email, :site, :adresse,  :country_id, :category_id, :administrateur_id)
     end
 end

@@ -76,10 +76,7 @@
   </div>
   
   
-    <div class="form-group col-lg-6">
-    <%= form.label :diplome %>
-    <%= form.collection_select :diplome_id, Diplome.all, :id, :titre, {prompt:"Sélectionnez une catégorie"}, multiple: true, class:"form-control" %>
-  </div>
+
 
   <div class="form-group col-lg-12">
     <%= form.submit "Ajouter l'établissement", class:"btn btn-success" %>

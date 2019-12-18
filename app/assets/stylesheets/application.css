@@ -62,12 +62,12 @@ body{
 
 }
 .bg-ored{
-	background-color: #f22f08;
+	background-color: cornflowerblue;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0);
 
 }
 .navbar-toggler{
-	background-color: #f22f08;
+	background-color: cornflowerblue;
 }
 .navbar-toggler-icon{
 	background-color: red;
@@ -198,7 +198,7 @@ body{
   /*z-index: 1;*/
   max-width: 150px;
   opacity: 1;
-  border: 10px solid #f22f08;
+  border: 10px solid white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   background-color: white;
 }
@@ -312,7 +312,7 @@ body{
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 .cover{
-	height: 150px;
+	height: 250px;
 }
 .card{
 	background-color: transparent;
@@ -620,7 +620,7 @@ figure.snip1312.hover img {
   z-index: 1;
   max-width: 120px;
   opacity: 1;
-  border: 5px solid #f22f08;
+  border: 5px solid white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   background-color: white;
 }

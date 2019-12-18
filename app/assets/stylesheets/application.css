@@ -62,7 +62,7 @@ body{
 
 }
 .bg-ored{
-	background-color: cornflowerblue;
+	background-color: #1A385C;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0);
 
 }
@@ -106,7 +106,7 @@ body{
 .btn-white:hover{
 	border-radius: 0px;
 	color: white;
-	background-color: white;
+	background-color: #f22f08;
 	border: 1px solid #f22f08;
 }
 .btn-appel{
@@ -198,7 +198,8 @@ body{
   /*z-index: 1;*/
   max-width: 150px;
   opacity: 1;
-  border: 10px solid white;
+  margin-top:100%;
+  border: 5px solid white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   background-color: white;
 }
@@ -276,7 +277,7 @@ body{
 .fac-text{
 	font-size:18px;
 	font-weight: normal;
-	text-transform: uppercase;
+	text-transform: none;
 	color:white;
 }
 .blo-bcg{
@@ -292,7 +293,7 @@ body{
 .blog-text{
 		font-size:16px;
 	font-weight: normal;
-	text-transform: uppercase;
+	text-transform: none;
 	color:white;
 }
 .e-cover{
@@ -370,7 +371,7 @@ body{
 }
 .snip1336 .profile {
   border-radius: 0%;
-  border: 5px solid #f22f08;
+  border: 5px solid white;
   background-color: white;
   position: absolute;
   bottom: 100%;
@@ -472,7 +473,7 @@ figure.snip1312 h3 {
   display: inline-block;
   font-weight: bold;
   text-transform: uppercase;
-	color: #f22f08;
+	color:  #1A385C;
 	font-size: 18px;
 }
 figure.snip1312 p {
@@ -558,7 +559,7 @@ figure.snip1312.hover img {
 
 #sticky-footer {
   flex-shrink: none;
-  background-color:#f22f08;
+  background-color:#1A385C;
 }
 .contact-form input[type="text"]{
 	height: 50px;
@@ -617,6 +618,7 @@ figure.snip1312.hover img {
   position: absolute;
   top: 100%;
   left: 25px;
+  margin-top:50%;
   z-index: 1;
   max-width: 120px;
   opacity: 1;

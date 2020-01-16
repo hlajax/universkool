@@ -1,0 +1,41 @@
+<%=render 'menus/main'%>
+<div class="container">
+	<div class="row">
+	         <div class="col-lg-12 col-12">
+ 	<div class="row">
+ 		
+    		<div class=" col-lg-4 offset-lg-0 mb-3 col-10 offset-1">
+    		<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @etablissements.each do |etablissement| %>
+    <tr>
+      <td><%=etablissement.nom%></td>
+      <td><%=image_tag etablissement.profil.url,class:"img-fluid"%></td>
+      <td><%=etablissement.country.nom%></td>
+      <td><%=link_to "Modifier", edit_etablissement_path%></td>
+    </tr>
+      <% end %>
+  </tbody>
+</table>
+
+  				
+      							
+    						
+		</div>
+ 	</div>
+ </div>
+  </div>
+</div>
+<%if administrateur_signed_in?%>
+<%= link_to 'New Etablissement', new_etablissement_path %>
+<%else%>
+<% end %>
+<%=render 'footers/main-footer'%>

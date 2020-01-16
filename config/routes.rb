@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+  resources :dashboard
   resources :messages
   resources :demandes
   resources :diplomes
   devise_for :utilisateurs
   resources :articles
   devise_for :administrateurs
+	  devise_scope :administrateur do
+    get '/administrateurs/sign_out' => 'devise/sessions#destroy'
+  end
   resources :etablissements
   resources :countries
   resources :accueil

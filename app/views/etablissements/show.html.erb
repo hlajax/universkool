@@ -11,6 +11,10 @@
 	<div class="row">
 	    <div class="col-lg-7 offset-lg-1  col-12 order-lg-1 order-12">
 	    	<h4 class="text-maj text-bold m-top-big">description</h4>
+	    	<%if administrateur_signed_in?%>
+                <%= link_to 'Modifier les informations', edit_etablissement_path(@etablissement), class:"btn btn-appel btn-sm" %>
+<%else%>
+<%end%>
 			<hr>
 			<p class="contenu"><%= raw(@etablissement.description) %></p>
             <hr>
@@ -66,9 +70,4 @@
 		</div>    
 	</div>
 </div>
-<%if administrateur_signed_in?%>
-<%= link_to 'Edit', edit_etablissement_path(@etablissement) %> |
-<%= link_to 'Back', etablissements_path %>
-<%else%>
-<%end%>
 <%=render 'footers/main-footer'%>

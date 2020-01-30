@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :dashboard
   resources :messages
   resources :demandes
   resources :diplomes
